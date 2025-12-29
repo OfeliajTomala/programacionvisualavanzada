@@ -1,35 +1,33 @@
 :root {
-    /* Color principal cyan */
     --cyan-principal: #0891B2;
     --cyan-hover: #0E7490;
     --cyan-claro: #67E8F9;
 
-    /* Colores neutros */
     --fondo-claro: #F8FAFC;
     --fondo-tarjeta: #FFFFFF;
 
-    /* Texto */
     --texto-principal: #0F172A;
     --texto-secundario: #334155;
 
-    /* Bordes */
     --borde-suave: #CBD5E1;
 }
 
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base */
 body {
     font-family: Arial, sans-serif;
     background: var(--fondo-claro);
-    min-height: 100vh;
     color: var(--texto-principal);
+    min-height: 100vh;
 }
 
-/*  HEADER */
+/* Header principal */
 header {
     position: relative;
     background: linear-gradient(135deg, var(--cyan-principal), var(--cyan-hover));
@@ -42,20 +40,19 @@ header {
 }
 
 .header-content {
-    position: relative;
-    z-index: 2;
     max-width: 600px;
+    z-index: 2;
 }
 
 .website-label {
     background: white;
     color: var(--cyan-principal);
-    padding: 5px 15px;
-    display: inline-block;
+    padding: 6px 18px;
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 20px;
     letter-spacing: 2px;
+    display: inline-block;
     transform: rotate(-2deg);
 }
 
@@ -63,83 +60,58 @@ header {
     font-size: 52px;
     font-weight: 800;
     margin-bottom: 20px;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header-content p {
     font-size: 18px;
     line-height: 1.6;
-    opacity: 0.95;
-    max-width: 480px;
 }
 
-/* IMAGEN*/
+/* Imagen header */
 .header-image {
     position: absolute;
     right: 0;
     top: 10px;
     width: 45%;
     height: 100%;
-    overflow: hidden;
 }
 
 .header-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     border-radius: 25px 0 0 25px;
-    box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.22);}
-
-/* Overlay sutil */
-.header-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.18),
-        rgba(0, 0, 0, 0)
-    );
-    pointer-events: none;
+    box-shadow: -20px 20px 40px rgba(0,0,0,0.22);
 }
 
-/*  CONTENEDOR */
+/* Contenedor */
 .container {
     max-width: 1200px;
     margin: -40px auto 0;
     padding: 0 20px 40px;
-    position: relative;
-    z-index: 10;
 }
 
-/* GRID */
+/* Grid principal */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-bottom: 40px;
 }
 
-/* TARJETAS*/
+/* Cards página principal */
 .card {
     background: var(--fondo-tarjeta);
     padding: 40px 30px;
     border-radius: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-top: 5px solid var(--cyan-principal);
+    transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
 }
 
-
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-top-color: var(--cyan-hover);
 }
 
@@ -151,75 +123,171 @@ header {
 .card h2 {
     font-size: 24px;
     margin-bottom: 15px;
+    position: static;
 }
 
 .card p {
-    color: var(--texto-secundario);
     font-size: 15px;
-    line-height: 1.6;
+    color: var(--texto-secundario);
 }
 
-/*  PÁGINAS  */
-.page {
-    display: none;
-}
-
-.page.active {
-    display: block;
-}
-
-/* BOTÓN VOLVER */
-.btn-back {
-    background: var(--cyan-principal);
-    color: white;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 20px;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(8, 145, 178, 0.3);
-}
-
-.btn-back:hover {
-    background: var(--cyan-hover);
-    transform: translateY(-2px);
-}
-
-/* HEADER INTERNO  */
+/* Header interno */
 .internal-header {
     background: linear-gradient(135deg, var(--cyan-principal), var(--cyan-hover));
     color: white;
     padding: 80px 40px 40px;
-    margin-bottom: 40px;
 }
 
 .internal-header h2 {
-    font-size: 42px;
+    font-size: 80px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
+    text-align: center;
 }
 
-/*  CONTENIDO*/
+/* Contenido de páginas */
 .content-page {
     background: var(--fondo-tarjeta);
     padding: 50px;
     border-radius: 15px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     border: 1px solid var(--borde-suave);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Títulos SOLO dentro del content-page */
+.content-page > h1 {
+    font-size: 34px;
+    margin-bottom: 32px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.content-page > h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 6px;
+    height: 65%;
+    background: var(--cyan-principal);
+    transform: translateY(-50%);
+    border-radius: 3px;
+}
+
+.content-page h2 {
+    font-size: 26px;
+    margin: 40px 0 22px;
+    color:#0E7490;
+    text-align: center;
+}
+
+.content-page h3 {
+    font-size: 20px;
+    color: var(--cyan-principal);
+    margin: 28px 0 16px;
 }
 
 .content-page p {
-    color: var(--texto-secundario);
     font-size: 16px;
     line-height: 1.9;
+    color: var(--texto-secundario);
     margin-bottom: 20px;
 }
 
-/* FOOTER  */
+/* Listas */
+.list {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.list li {
+    background: #F8FAFC;
+    border-left: 6px solid var(--cyan-principal);
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+}
+
+/* Grid de ejemplos */
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Flip cards */
+.flip-card {
+    perspective: 1200px;
+    height: 100%;
+    min-height: 220px;
+    
+}
+
+.flip-card-inner {
+    position: relative;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+.flip-card input {
+    display: none;
+}
+
+.flip-card input:checked + .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    inset: 0;
+    padding: 20px;
+    border-radius: 18px;
+    backface-visibility: hidden;
+    background: #e5edf8;
+    border-left: 6px solid var(--cyan-principal);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+.flip-hint {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--cyan-principal);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Código */
+.code-block {
+    background: #0F172A;
+    color: #E2E8F0;
+    padding: 20px;
+    border-radius: 12px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+/* Botón volver */
+.btn-back {
+    background: var(--cyan-principal);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 30px;
+    text-decoration: none;
+}
+
+/* Footer */
 footer {
     background: var(--texto-principal);
     color: white;
@@ -228,27 +296,11 @@ footer {
     margin-top: 60px;
 }
 
-/* RESPONSIVE*/
-@media (max-width: 992px) {
-    .header-image {
-        width: 40%;
-    }
-
-    header {
-        padding: 40px 30px;
-        min-height: 350px;
-    }
-
-    .header-content h1 {
-        font-size: 40px;
-    }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         padding: 30px 20px;
-        min-height: auto;
     }
 
     .header-image {
@@ -256,28 +308,6 @@ footer {
         width: 100%;
         height: 260px;
         margin-top: 30px;
-    }
-
-    .header-image img {
-        border-radius: 20px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-    }
-
-    .container {
-        margin-top: 20px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .internal-header {
-        padding: 60px 20px 30px;
-    }
-
-    .internal-header h2 {
-        font-size: 32px;
     }
 
     .content-page {
@@ -290,27 +320,11 @@ footer {
         font-size: 28px;
     }
 
-    .header-content p {
-        font-size: 16px;
-    }
-
-    .card {
-        padding: 30px 20px;
+    .internal-header h2 {
+        font-size: 28px;
     }
 
     .card h2 {
         font-size: 20px;
-    }
-
-    .card .icon {
-        font-size: 48px;
-    }
-
-    .content-page {
-        padding: 20px 15px;
-    }
-
-    .internal-header h2 {
-        font-size: 26px;
     }
 }
