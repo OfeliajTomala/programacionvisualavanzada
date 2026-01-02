@@ -118,7 +118,7 @@ fun sumar(a: Int, b: Int): Int {
 
             <div class="examples-grid">
                 <!-- Variables parámetro -->
-                <div class="flip-card">
+                <div class="flip-card", style="min-height: 270px;">
                     <label>
                         <input type="checkbox">
                         <div class="flip-card-inner">
@@ -141,7 +141,7 @@ fun mostrarNombre(nombre: String) {
                 </div>
 
                 <!-- Variables locales -->
-                <div class="flip-card">
+                <div class="flip-card", style="min-height: 270px;">
                     <label>
                         <input type="checkbox">
                         <div class="flip-card-inner">
@@ -162,7 +162,7 @@ fun calcularArea(base: Double, altura: Double): Double {
                     </label>
                 </div>
                 <!-- Variables globales -->
-                <div class="flip-card">
+                <div class="flip-card",style="min-height: 270px;">
                     <label>  
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -173,6 +173,10 @@ fun calcularArea(base: Double, altura: Double): Double {
                                     dependiendo del contexto.
                                 </p>
                             </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
         </section>
 
     </div><br>
@@ -244,7 +248,7 @@ fun saludar() {
         <h2>Según sus parámetros y retorno</h2>
         <div class="examples-grid">
             <!--Funciones sin parámetros ni retorno-->
-            <div class="flip-card">
+            <div class="flip-card", style="min-height: 270px;">
                 <label>
                     <input type="checkbox">
                     <div class="flip-card-inner">
@@ -266,7 +270,7 @@ fun mostrarMensaje() {
                 </label>
             </div>
             <!--Funciones con parámetros y sin retorno-->
-            <div class="flip-card">
+            <div class="flip-card", style="min-height: 270px;">
                 <label>
                     <input type="checkbox">
                     <div class="flip-card-inner">
@@ -290,7 +294,7 @@ fun mostrarNombre(nombre: String) {
         </div>
         <div class="examples-grid">
             <!--Funciones sin parámetros y con retorno-->
-            <div class="flip-card">
+            <div class="flip-card", style="min-height: 270px;">
                 <label>
                     <input type="checkbox">
                     <div class="flip-card-inner">
@@ -312,7 +316,7 @@ fun generarNumero(): Int {
                 </label>
             </div>
             <!--Funciones con parámetros y retorno-->
-            <div class="flip-card">
+            <div class="flip-card", style="min-height: 270px;">
                 <label>
                     <input type="checkbox">
                     <div class="flip-card-inner">
@@ -339,7 +343,7 @@ fun sumar(a: Int, b: Int): Int {
         <h2>Tipos Especiales de Funciones</h2>
         <div class="examples-grid">
             <!--Funciones Anónimas-->
-            <div class="flip-card">
+            <div class="flip-card", style="min-height: 270px;">
                 <label>
                     <input type="checkbox">
                     <div class="flip-card-inner">
@@ -361,7 +365,7 @@ println(cuadrado(4))
                 </label>
             </div>
             <!--Funciones Recursivas-->
-            <div class="flip-card">
+            <div class="flip-card", style="min-height: 270px;">
                 <label>
                     <input type="checkbox">
                     <div class="flip-card-inner">
@@ -386,7 +390,7 @@ fun factorial(n: Int): Int {
         </div>
         <div class="examples-grid">
             <!--Funciones de Orden Superior-->
-            <div class="flip-card">
+            <div class="flip-card", style="min-height: 270px;">
                 <label>
                     <input type="checkbox">
                     <div class="flip-card-inner">
@@ -409,7 +413,7 @@ fun operar(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
                 </label>
             </div>
             <!--Funciones Asíncronas-->
-            <div class="flip-card">
+            <div class="flip-card", style="min-height: 270px;">
                 <label>
                     <input type="checkbox">
                     <div class="flip-card-inner">
@@ -525,7 +529,7 @@ suspend fun obtenerClimaDelServidor(): String {
                 retorne su área.
             </p>
 
-            <pre class="code-block"><code class="language-kotlin">
+            <pre class="code-block", style="min-height: 250px;"><code class="language-kotlin">
 fun calcularArea(base: Double, altura: Double): Double {
     return base * altura
 }
@@ -542,7 +546,7 @@ println("El área es: $area")
                 Crear una función que reciba un número entero y determine si es par o impar.
             </p>
 
-            <pre class="code-block"><code class="language-kotlin">
+            <pre class="code-block", style="min-height: 290px;"><code class="language-kotlin">
 fun esPar(numero: Int): Boolean {
     return numero % 2 == 0
 }

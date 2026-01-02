@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Expresiones y Operadores en Programación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- HEADER -->
+    <header class="internal-header">
+        <h2>LECCIÓN 1</h2>
+    </header><br>
+
+    
+    <div class="content-page">
+        <h1>¿Qué es una expresión?</h1>
+        <hr>
+        <!-- QUÉ ES UNA EXPRESIÓN -->
+        <section>
+
+            <p>
+                Una <strong>expresión</strong> es una estructura formada por <strong>operandos</strong> (valores o
+                variables)
+                y <strong>operadores</strong>, que al ser evaluada por el programa produce <strong>un valor
+                    final</strong>.
+                Ese valor puede almacenarse en una variable, utilizarse en una condición o retornarse desde una función.
+            </p>
+
+            <p>
+                En términos generales, <strong>las expresiones representan la lógica del programa</strong>, ya que
+                permiten:
+            </p>
+
+            <ul class="list">
+                <li>Realizar cálculos matemáticos</li>
+                <li>Comparar información</li>
+                <li>Evaluar condiciones lógicas</li>
+                <li>Tomar decisiones programáticas</li>
+                <li>Generar resultados dinámicos</li>
+            </ul>
+
+            <p>
+                En muchos lenguajes modernos, como Kotlin, <strong>incluso las estructuras de control pueden comportarse
+                    como expresiones</strong>,
+                lo que hace el código más compacto y expresivo.
+            </p>
+
+            <div class="examples-grid">
+            <div class="flip-card">
+                <label>
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Ejemplo</h3>
+                            
+                            <pre class="code-block"><code class="language-kotlin">
+val resultado = (8 + 2) * 3
+                            </code></pre>
+                            <h4>Evaluación paso a paso:</h4>
+                            <ol style="padding-left:25px;">
+                                <li>Se evalúa la expresión <code>(8 + 2)</code> → <code>10</code></li>
+                                <li>Se multiplica <code>10 * 3</code> → <code>30</code></li>
+                                <li>El valor <code>30</code> se asigna a la variable <code>resultado</code></li>
+                            </ol>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            </div>
+        </section>
+        <!-- COMPONENTES DE UNA EXPRESIÓN -->
+        <section>
+        <h2>Componentes de una expresión</h2>
+
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Operandos</strong></td>
+                            <td>Valores o variables que participan en la operación</td>
+                            <td><code>5, x, "texto"</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Operadores</strong></td>
+                            <td>Símbolos que indican la operación a realizar</td>
+                            <td><code>+, -, *, /, &&, ||</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resultado</strong></td>
+                            <td>Valor final obtenido tras la evaluación</td>
+                            <td><code>15, true, "Hola Mundo"</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div><br>
+
+    <!-- TIPOS DE EXPRESIONES -->
+    <div class="content-page">
+        <h1>Tipos de Expresiones</h1>
+        <hr>
+
+        <div class="examples-grid">
+            <!-- Expresiones Aritméticas -->
+            <div class="flip-card", style="min-height: 180px;">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Expresiones Aritméticas</h3>
+                            <p>Producen un valor numérico mediante operaciones matemáticas.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>                        
+                            <pre style="margin-top:15px;"><code class="language-kotlin">
+val total = 15 + 5 * 2 //total = 25 
+                            </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Expresiones Relacionales -->
+            <div class="flip-card", style="min-height: 180px;">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Expresiones Relacionales</h3>
+                            <p>Comparan dos valores y retornan un valor booleano (<code>true</code> o
+                                <code>false</code>).</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre><code class="language-kotlin">
+val edad = 18
+val esMayor = edad >= 18  // true
+                            </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="examples-grid">    
+
+            <!-- Expresiones Lógicas -->
+            <div class="flip-card", style="min-height: 280px;">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Expresiones Lógicas</h3>
+                            <p>Combinan condiciones booleanas usando operadores lógicos.</p>
+                        <h4>Tabla de verdad:</h4><br>
+                            <div style="font-size:14px; text-align:left;">
+                                <strong>AND (&&):</strong> true solo si ambas son true<br>
+                                <strong>OR (||):</strong> true si al menos una es true<br>
+                                <strong>NOT (!):</strong> invierte el valor booleano
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre style="margin-top:15px;"><code class="language-kotlin">
+val tieneEntrada = true
+val edad = 20
+val puedeIngresar = tieneEntrada && edad >= 18  // true
+                            </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Expresiones de Asignación -->
+            <div class="flip-card", style="min-height: 280px;">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Expresiones de Asignación</h3>
+                            <p>Asignan el resultado de una expresión a una variable.</p>
+                        <h4>Operadores de asignación compuesta:</h4><br>
+                            <div style="font-size:14px; text-align:left;">
+                                <code>x += 5</code> → <code>x = x + 5</code><br>
+                                <code>x -= 3</code> → <code>x = x - 3</code><br>
+                                <code>x *= 2</code> → <code>x = x * 2</code><br>
+                                <code>x /= 4</code> → <code>x = x / 4</code>
+                            </div>    
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre style="margin-top:15px;"><code class="language-kotlin">
+var saldo = 1000.0
+saldo -= 150.5  // saldo = 849.5
+                            </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        
+        </div>
+    </div><br>
+
+    <!-- TIPOS DE OPERADORES -->
+    <div class="content-page">
+        <h1>Operadores</h1><hr>
+        <p>
+            Los operadores son símbolos que le indican al programa que realice operaciones específicas sobre uno o más valores.
+        </p>
+
+        <!-- OPERADORES ARITMÉTICOS -->
+        <section>
+            <h2>Operadores Aritméticos</h2>
+
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>+</code></td>
+                            <td>Suma</td>
+                            <td>Suma dos valores</td>
+                            <td><code>5 + 3</code></td>
+                            <td><code>8</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>-</code></td>
+                            <td>Resta</td>
+                            <td>Resta el segundo valor del primero</td>
+                            <td><code>10 - 4</code></td>
+                            <td><code>6</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>*</code></td>
+                            <td>Multiplicación</td>
+                            <td>Multiplica dos valores</td>
+                            <td><code>6 * 7</code></td>
+                            <td><code>42</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>/</code></td>
+                            <td>División</td>
+                            <td>Divide el primer valor entre el segundo</td>
+                            <td><code>15 / 3</code></td>
+                            <td><code>5</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>%</code></td>
+                            <td>Módulo</td>
+                            <td>Devuelve el residuo de la división</td>
+                            <td><code>17 % 5</code></td>
+                            <td><code>2</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><br>
+
+            <h3>Ejemplo:</h3>
+            <pre class="code-block", style="min-height: 260px;"><code class="language-kotlin">
+fun calcularDescuento(precio: Double, porcentaje: Double): Double {
+    return precio * (porcentaje / 100)
+}
+
+val precioOriginal = 200.0
+val descuento = calcularDescuento(precioOriginal, 15.0)  // 30.0
+val precioFinal = precioOriginal - descuento  // 170.0
+            </code></pre>
+        </section>
+
+        <!-- OPERADORES RELACIONALES -->
+        <section>
+            <h2>Operadores Relacionales</h2>
+
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>==</code></td>
+                            <td>Igualdad</td>
+                            <td>Verdadero si los valores son iguales</td>
+                            <td><code>5 == 5</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>!=</code></td>
+                            <td>Desigualdad</td>
+                            <td>Verdadero si los valores son diferentes</td>
+                            <td><code>5 != 3</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;</code></td>
+                            <td>Mayor que</td>
+                            <td>Verdadero si el primero es mayor</td>
+                            <td><code>10 > 5</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;</code></td>
+                            <td>Menor que</td>
+                            <td>Verdadero si el primero es menor</td>
+                            <td><code>3 < 7</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;=</code></td>
+                            <td>Mayor o igual</td>
+                            <td>Verdadero si el primero es mayor o igual</td>
+                            <td><code>5 >= 5</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;=</code></td>
+                            <td>Menor o igual</td>
+                            <td>Verdadero si el primero es menor o igual</td>
+                            <td><code>4 <= 4</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                    </tbody>
+                </table>  
+            </div>
+            <h3>Ejemplo:</h3>
+            <pre class="code-block", style="min-height: 300px;"><code class="language-kotlin">
+fun main() {
+    val a = 10
+    val b = 20
+
+    println(a == b)   // false
+    println(a != b)   // true
+    println(a >= 10)  // true
+    println(b <= 15)  // false
+}
+            </code></pre>
+        </section>
+
+        <!-- OPERADORES LÓGICOS -->
+        <section>
+            <h2>Operadores Lógicos</h2>
+
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&&</code></td>
+                            <td>AND (Y lógico)</td>
+                            <td>Verdadero si AMBAS condiciones son verdaderas</td>
+                            <td><code>true && false</code></td>
+                            <td><code>false</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>||</code></td>
+                            <td>OR (O lógico)</td>
+                            <td>Verdadero si AL MENOS UNA condición es verdadera</td>
+                            <td><code>true || false</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>!</code></td>
+                            <td>NOT (Negación)</td>
+                            <td>Invierte el valor booleano</td>
+                            <td><code>!true</code></td>
+                            <td><code>false</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Ejemplo práctico:</h3>
+            <pre class="code-block", style="min-height: 340px;"><code class="language-kotlin">
+fun verificarAcceso(edad: Int, tienePermiso: Boolean, esEmpleado: Boolean): Boolean {
+    // Puede acceder si:
+    // 1. Es mayor de edad Y tiene permiso
+    // 2. O si es empleado (sin importar edad o permiso)
+    return (edad >= 18 && tienePermiso) || esEmpleado
+}
+
+val acceso1 = verificarAcceso(20, true, false)   // true
+val acceso2 = verificarAcceso(16, true, true)    // true (es empleado)
+val acceso3 = verificarAcceso(16, false, false)  // false
+            </code></pre>
+        </section>
+
+        <!-- OPERADORES DE INCREMENTO/DECREMENTO -->
+        <section>
+            <h2>Operadores de Incremento y Decremento</h2>
+            <p> 
+                Estos operadores permiten aumentar o disminuir el valor de una variable en una unidad o en una cantidad
+                específica de forma concisa.
+            </p>
+
+            <div class="examples-grid">
+                <div class="card">
+                    <h3>Incremento</h3>
+                    <pre class="code-block"><code class="language-kotlin">
+var contador = 5
+contador++      // Aumenta en 1: contador = 6
+contador += 3   // Aumenta en 3: contador = 9
+                    </code></pre>
+                </div>
+
+                <div class="card">
+                    <h3>Decremento</h3>
+                    <pre class="code-block"><code class="language-kotlin">
+var numero = 10
+numero--       // Disminuye en 1: numero = 9
+numero -= 2    // Disminuye en 2: numero = 7
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+    </div><br>
+
+    <!-- EJERCICIOS PRÁCTICOS -->
+    <div class="content-page">
+        
+        <h1>Ejercicios </h1>
+        <hr>
+        <div class="card">
+       
+
+        <!-- EJERCICIO -->
+        <section class="exercise">
+            <div class="contenedor-degradado" style="background:linear-gradient(to right, #0E7490, #0891B2, #67E8F9);">
+                <h2 style="color:white;">Ejercicio 1: Calculadora de IMC</h2>
+            </div>
+            <p>Crear una función que calcule el Índice de Masa Corporal (IMC) y determine la categoría.</p>
+
+            <h3>Procedimiento</h3>
+            <ol class="list">
+                <li>Recibir peso (kg) y altura (m) como parámetros</li>
+                <li>Calcular IMC: peso / (altura * altura)</li>
+                <li>Usar expresiones condicionales para determinar categoría</li>
+                <li>Retornar tanto el IMC como la categoría</li>
+            </ol>
+
+            <h3>Código</h3>
+            <pre class="code-block"><code class="language-kotlin">
+fun calcularIMC(peso: Double, altura: Double): Pair<Double, String> {
+    val imc = peso / (altura * altura)
+    
+    val categoria = when {
+        imc < 18.5 -> "Bajo peso"
+        imc < 25.0 -> "Peso normal"
+        imc < 30.0 -> "Sobrepeso"
+        else -> "Obesidad"
+    }
+    
+    return Pair(imc, categoria)
+}
+
+// Uso de la función
+val (imc, categoria) = calcularIMC(70.0, 1.75)
+println("IMC: ${String.format("%.2f", imc)}")  // Salida: IMC: 22.86
+println("Categoría: $categoria")                // Salida: Categoría: Peso normal
+            </code></pre>
+        </section>
+    </div><br>
+
+    <!-- RESUMEN FINAL -->
+    <div class="content-page">
+        <h1>Resumen Final</h1>
+        <hr>
+
+        <div class="examples-grid">
+            <div class="card">
+                <h3>Expresiones</h3>
+                <p>Las <strong>expresiones</strong> permiten representar operaciones y decisiones en el código.</p>
+            </div>
+
+            <div class="card">
+                <h3>Operadores</h3>
+                <p>Los <strong>operadores</strong> construyen la lógica del programa mediante operaciones aritméticas,
+                    relacionales y lógicas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Funciones</h3>
+                <p>Las <strong>funciones</strong> encapsulan expresiones para reutilizar código y organizar la lógica
+                    del programa.</p>
+            </div>
+        </div>
+
+
+    </div><br>
+
+    <!-- BOTÓN VOLVER -->
+
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+
+
+    <br><br>
+
+   
+</body>
+
+</html>
