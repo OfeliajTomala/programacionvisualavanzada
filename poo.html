@@ -73,8 +73,7 @@
                                     <p>Una clase típica incluye: nombre, atributos (variables) y métodos (funciones).
                                     </p>
                                     <h3>Ejemplo en Kotlin:</h3>
-                                    <pre class="code-block"><code class="language-kotlin">
-class Persona {
+                                    <pre class="code-block"><code class="language-kotlin">class Persona {
     // Atributos (propiedades)
     var nombre: String = ""
     var edad: Int = 0
@@ -88,8 +87,7 @@ class Persona {
         edad++
         println("¡Ahora tengo $edad años!")
     }
-}
-                                </code></pre>
+}</code></pre>
                                 </div>
                             </div>
                         </label>
@@ -112,8 +110,7 @@ class Persona {
                                     <p>Para crear un objeto, se instancia la clase usando el constructor.</p>
 
                                     <h3>Ejemplo:</h3>
-                                    <pre class="code-block"><code class="language-kotlin">
-// Crear objetos (instancias) de la clase Persona
+                                    <pre class="code-block"><code class="language-kotlin">// Crear objetos (instancias) de la clase Persona
 val persona1 = Persona()
 persona1.nombre = "Ana"
 persona1.edad = 25
@@ -124,8 +121,7 @@ persona2.edad = 30
 
 // Usar los métodos del objeto
 persona1.saludar()  // Salida: "Hola, me llamo Ana"
-persona2.saludar()  // Salida: "Hola, me llamo Carlos"
-                                </code></pre>
+persona2.saludar()  // Salida: "Hola, me llamo Carlos"</code></pre>
                                 </div>
                             </div>
                         </label>
@@ -152,8 +148,7 @@ persona2.saludar()  // Salida: "Hola, me llamo Carlos"
                 <li>Mejora la seguridad y mantenibilidad</li>
             </ul>
             <h3>Ejemplo en Kotlin:</h3>
-            <pre class="code-block"><code class="language-kotlin">
-class CuentaBancaria {
+            <pre class="code-block"><code class="language-kotlin">class CuentaBancaria {
     // Atributo privado (encapsulado)
     private var saldo: Double = 0.0
     
@@ -183,8 +178,7 @@ class CuentaBancaria {
 // Uso
 val miCuenta = CuentaBancaria()
 miCuenta.depositar(1000.0)
-// miCuenta.saldo = 5000  // ERROR: saldo es privado
-                                </code></pre>
+// miCuenta.saldo = 5000  // ERROR: saldo es privado</code></pre>
         </section>
 
 
@@ -200,8 +194,7 @@ miCuenta.depositar(1000.0)
             </ul>
 
             <h3>Ejemplo en Kotlin:</h3>
-            <pre class="code-block"><code class="language-kotlin">
-// Clase padre
+            <pre class="code-block"><code class="language-kotlin">// Clase padre
 open class Vehiculo(val marca: String, val modelo: String) {
     fun arrancar() {
         println("El vehículo $marca $modelo ha arrancado")
@@ -237,8 +230,7 @@ class Motocicleta(marca: String, modelo: String, val cilindrada: Int)
 // Uso
 val miAuto = Automovil("Toyota", "Corolla", 4)
 miAuto.arrancar()  // Método heredado
-miAuto.abrirMaletero()  // Método propio
-                                </code></pre>
+miAuto.abrirMaletero()  // Método propio</code></pre>
         </section>
 
         <!-- POLIMORFISMO -->
@@ -256,8 +248,7 @@ miAuto.abrirMaletero()  // Método propio
             </ul>
 
             <h3>Ejemplo en Kotlin:</h3>
-            <pre class="code-block"><code class="language-kotlin">
-// Clase base
+            <pre class="code-block"><code class="language-kotlin">// Clase base
 open class Animal(val nombre: String) {
     open fun hacerSonido() {
         println("El animal hace un sonido")
@@ -293,8 +284,7 @@ val animales = listOf(
 
 for (animal in animales) {
     animal.hacerSonido()  // Cada animal responde diferente
-}
-                                </code></pre>
+}</code></pre>
 
         </section>
 
@@ -309,8 +299,7 @@ for (animal in animales) {
                 <li>Métodos abstractos</li>
             </ul>
                                 <h3>Ejemplo en Kotlin:</h3>
-                                <pre class="code-block"><code class="language-kotlin">
-// Clase abstracta (no se puede instanciar directamente)
+                                <pre class="code-block"><code class="language-kotlin">// Clase abstracta (no se puede instanciar directamente)
 abstract class Figura {
     // Método abstracto (sin implementación)
     abstract fun calcularArea(): Double
@@ -343,8 +332,7 @@ val figuras = listOf(
 for (figura in figuras) {
     println("Área: ${figura.calcularArea()}")
     figura.describir()
-}
-                                </code></pre>
+}</code></pre>
         </section>
     </div><br>
 
@@ -452,8 +440,7 @@ if (usuario1.tomarPrestado(libro1)) {
             </ul>
 
             <h3>Solución:</h3>
-            <pre class="code-block"><code class="language-kotlin">
-// Clase abstracta (Abstracción)
+            <pre class="code-block"><code class="language-kotlin">// Clase abstracta (Abstracción)
 abstract class Figura {
     abstract fun calcularArea(): Double
     abstract fun calcularPerimetro(): Double
@@ -512,8 +499,7 @@ fun main() {
     for (figura in figuras) {
         figura.describir()
     }
-}
-            </code></pre>
+}</code></pre>
         </section>
 
         <!-- EJERCICIO 2 -->
@@ -532,8 +518,7 @@ fun main() {
             </ul>
 
             <h3>Solución:</h3>
-            <pre class="code-block"><code class="language-kotlin">
-// Clase base (Abstracción)
+            <pre class="code-block"><code class="language-kotlin">// Clase base (Abstracción)
 open class Empleado(val nombre: String, val id: String, protected val salarioBase: Double) {
     // Método que será sobrescrito (Polimorfismo)
     open fun calcularSalario(): Double {
@@ -593,8 +578,7 @@ fun main() {
     // Uso específico de Gerente
     val gerente = empleados[2] as Gerente
     gerente.dirigirReunion()
-}
-            </code></pre>
+}</code></pre>
         </section>
     </div><br>
 

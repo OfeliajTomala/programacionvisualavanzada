@@ -53,21 +53,17 @@
                             <h3>Condición if</h3>
                             <p>Ejecuta un bloque de instrucciones solo cuando una condición es verdadera. Si no se
                                 cumple, el programa continúa su ejecución normal.</p>
-                            <pre class="code-block"><code class="language-kotlin">
-if (condicion) {
+                            <pre class="code-block"><code class="language-kotlin">if (condicion) {
 // instrucciones
-}
-                            </code></pre>
+}</code></pre>
                             </div>
                             <div class="flip-card-back">
                                 <h3>Ejemplo if</h3>
-                                <pre class="code-block"><code class="language-kotlin">
-val edad = 18
+                                <pre class="code-block"><code class="language-kotlin">val edad = 18
                                                     
 if (edad >= 18) {
 println("Es mayor de edad")
-}
-                                    </code></pre>
+}</code></pre>
                             </div>
                         </div>
                 </label>
@@ -82,27 +78,22 @@ println("Es mayor de edad")
                             <h3>Condición else</h3>
                             <p>Permite seleccionar entre dos alternativas. Se ejecuta un bloque si la condición es
                                 verdadera y otro si es falsa.</p>
-                            <pre class="code-block"><code class="language-kotlin">
-if (condicion) {
+                            <pre class="code-block"><code class="language-kotlin">if (condicion) {
     // instrucciones si es verdadera
 } else {
     // instrucciones si es falsa
-}
-                        </code></pre>
+}</code></pre>
 
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo if-else</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-
-val nota = 7 
+                            <pre class="code-block"><code class="language-kotlin">val nota = 7 
                                     
 if (nota == 7) { 
 println("Aprobado") 
 } else { 
 println("Reprobado") 
-}
-                                </code></pre>
+}</code></pre>
                         </div>
                     </div>
                 </label>
@@ -117,21 +108,17 @@ println("Reprobado")
                             <h3>Condición else if</h3>
                             <p>Se utiliza para evaluar múltiples condiciones de forma secuencial. El primer bloque cuya
                                 condición sea verdadera será el que se ejecute.</p>
-                            <pre class="code-block"><code class="language-kotlin">
-if (condicion1) {
+                            <pre class="code-block"><code class="language-kotlin">if (condicion1) {
     // código
 } else if (condicion2) {
     // código
 } else {
     // código final
-}
-                        </code></pre>
-
+}</code></pre>
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo else if</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-val calificacion = 9
+                            <pre class="code-block"><code class="language-kotlin">val calificacion = 9
 
 if (calificacion >= 9) {
     println("Excelente")
@@ -139,8 +126,7 @@ if (calificacion >= 9) {
     println("Bueno")
 } else {
     println("Insuficiente")
-}                             
-</code></pre>
+}</code></pre>
                         </div>
                     </div>
                 </label>
@@ -160,20 +146,17 @@ if (calificacion >= 9) {
                             <h3>Condición switch</h3>
                             <p>Selecciona un bloque de código según el valor de una variable, siendo más clara y
                                 ordenada que múltiples if - else cuando existen varias opciones.</p>
-                            <pre class="code-block"><code class="language-java">
-switch (variable) { 
+                            <pre class="code-block"><code class="language-java">switch (variable) { 
 case valor: 
 // instrucciones
 break;
 default:
 // caso por defecto
-}
-</code></pre>
+}</code></pre>
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo switch</h3>
-                            <pre class="code-block"><code class="language-java">
-int dia = 3;
+                            <pre class="code-block"><code class="language-java">int dia = 3;
 
 switch (dia) {
     case 1:
@@ -187,8 +170,7 @@ switch (dia) {
         break;
     default:
         System.out.println("Día inválido");
-}
-</code></pre>
+}</code></pre>
 
                         </div>
                     </div>
@@ -203,26 +185,22 @@ switch (dia) {
                             <h3>Condición when</h3>
                             <p>La sentencia <strong>switch</strong> se utiliza en varios lenguajes como Java o C++.
     En Kotlin, esta estructura se reemplaza por la sentencia <strong>when</strong>.</p>
-                            <pre class="code-block"><code class="language-kotlin">
-when (variable) {
+                            <pre class="code-block"><code class="language-kotlin">when (variable) {
     valor1 -> // instrucciones
     valor2 -> // instrucciones
     else -> // caso por defecto
-}
-</code></pre>
+}</code></pre>
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo when</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-val dia = 3
+                            <pre class="code-block"><code class="language-kotlin">val dia = 3
 
 when (dia) {
     1 -> println("Lunes")
     2 -> println("Martes")
     3 -> println("Miércoles")
     else -> println("Día inválido")
-}
-</code></pre>
+}</code></pre>
 
                         </div>
                     </div>
@@ -256,21 +234,17 @@ when (dia) {
                             que se debe repetir un bloque de código.
                         </p>
 
-                        <pre class="code-block"><code class="language-kotlin">
-for (i in 1..5) {
+                        <pre class="code-block"><code class="language-kotlin">for (i in 1..5) {
     println(i)
-}
-                        </code></pre>
+}</code></pre>
                     </div>
 
                     <div class="flip-card-back">
                         <h3>Ejemplo for</h3>
 
-                        <pre class="code-block"><code class="language-kotlin">
-for (i in 1..10) {
+                        <pre class="code-block"><code class="language-kotlin">for (i in 1..10) {
     println("Número: $i")
-}
-                        </code></pre>
+}</code></pre>
                     </div>
 
                 </div>
@@ -290,24 +264,20 @@ for (i in 1..10) {
                             La condición se evalúa antes de cada iteración.
                         </p>
 
-                        <pre class="code-block"><code class="language-kotlin">
-while (condicion) {
+                        <pre class="code-block"><code class="language-kotlin">while (condicion) {
     // instrucciones
-}
-                        </code></pre>
+}</code></pre>
                     </div>
 
                     <div class="flip-card-back">
                         <h3>Ejemplo while</h3>
 
-                        <pre class="code-block"><code class="language-kotlin">
-var contador = 1
+                        <pre class="code-block"><code class="language-kotlin">var contador = 1
 
 while (contador <= 5) {
     println(contador)
     contador++
-}
-                        </code></pre>
+}</code></pre>
                     </div>
 
                 </div>
@@ -327,24 +297,20 @@ while (contador <= 5) {
                             se ejecute al menos una vez.
                         </p>
 
-                        <pre class="code-block"><code class="language-kotlin">
-do {
+                        <pre class="code-block"><code class="language-kotlin">do {
     // instrucciones
-} while (condicion)
-                        </code></pre>
+} while (condicion)</code></pre>
                     </div>
 
                     <div class="flip-card-back">
                         <h3>Ejemplo do - while</h3>
 
-                        <pre class="code-block"><code class="language-kotlin">
-var numero = 1
+                        <pre class="code-block"><code class="language-kotlin">var numero = 1
 
 do {
     println(numero)
     numero++
-} while (numero <= 3)
-                        </code></pre>
+} while (numero <= 3)</code></pre>
                     </div>
 
                 </div>
@@ -367,8 +333,7 @@ do {
         Mayores de 18 años → $10 
     </p>
 
-    <pre class="code-block", style="min-height: 320px;"><code class="language-kotlin">
-print("Ingrese la edad del cliente: ")
+    <pre class="code-block"><code class="language-kotlin">print("Ingrese la edad del cliente: ")
 val edad = readLine()!!.toInt()
 
 if (edad < 4) {
@@ -377,8 +342,7 @@ if (edad < 4) {
     println("El precio de la entrada es $5")
 } else {
     println("El precio de la entrada es $10")
-}
-    </code></pre>
+}</code></pre>
     </section>
     <!--Ejercicio 2-->
     <section class="exercise">
@@ -387,8 +351,7 @@ if (edad < 4) {
         Escribir un programa que pida un número entero positivo y muestre todos los números impares desde 1 hasta ese número, separados por comas.
     </p>
 
-    <pre class="code-block", style="min-height: 320px;"><code class="language-kotlin">
-print("Ingrese un número entero positivo: ")
+    <pre class="code-block"><code class="language-kotlin">print("Ingrese un número entero positivo: ")
 val numero = readLine()!!.toInt()
 
 for (i in 1..numero step 2) {
@@ -397,8 +360,7 @@ for (i in 1..numero step 2) {
     } else {
         print(i)
     }
-}
-    </code></pre>
+}</code></pre>
     </section>
 
     </div><br>

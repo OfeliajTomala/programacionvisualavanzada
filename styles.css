@@ -209,7 +209,7 @@ header {
   border-radius: 10px;
   text-align: center;
   /* Fondo degradado */
-  background: linear-gradient(to right, #0891B2, #0E7490, #67E8F9); /* Degradado de azul a azul claro */
+  background: linear-gradient(to right, #0E7490, #0891B2, #67E8F9); /* Degradado de azul a azul claro */
   color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -218,6 +218,7 @@ header {
 .list {
     list-style: none;
     margin: 30px 0;
+    text-align: left;
 }
 
 .list li {
@@ -272,8 +273,7 @@ header {
     border-left: 6px solid var(--cyan-principal);
     display: flex;
     flex-direction: column;
-
-    
+      
 }
 
 .flip-card-back {
@@ -295,7 +295,8 @@ header {
     border-radius: 12px;
     font-family: "Courier New", monospace;
     font-size: 14px;
-    margin: 20px 0;
+    margin-top: 16px;   
+    margin-bottom: 32px;
     overflow-x: auto;
     max-height: 180px;
     overflow-y: auto;
@@ -310,8 +311,24 @@ header {
 }
 
 pre.code-block {
-    padding-top: 0px;
+    padding: 16px 20px;
+    margin-top: 16px;   
+    margin-bottom: 32px;
+    background: #0F172A;
+    border-radius: 12px;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: none;
+    text-align: left;
 }
+
+
+pre.code-block code {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
 
 /* Botón volver */
 .btn-back {

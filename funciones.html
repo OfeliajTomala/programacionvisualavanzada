@@ -57,11 +57,9 @@
             </p>
 
             <h3>Ejemplo:</h3>
-            <pre class="code-block"><code class="language-kotlin">
-fun mostrarNombre(nombre: String) {
+            <pre class="code-block"><code class="language-kotlin">fun mostrarNombre(nombre: String) {
     println("Hola $nombre")
-}
-            </code></pre>
+}</code></pre>
 
         </section>
 
@@ -84,21 +82,17 @@ fun mostrarNombre(nombre: String) {
             <div class="examples-grid">
                 <div class="card">
                     <h3>Ejemplo sin retorno (void en otros lenguajes):</h3>
-                    <pre class="code-block"><code class="language-kotlin">
-fun mostrarMensaje() {
+                    <pre class="code-block"><code class="language-kotlin">fun mostrarMensaje() {
     println("Hola Mundo")
-}
-            </code></pre>
+}</code></pre>
 
                     <p>Esta función no devuelve nada (su tipo implícito es <code>Unit</code> en Kotlin).</p>
                 </div>
                 <div class="card">
                     <h3>Ejemplo con retorno:</h3>
-                    <pre class="code-block"><code class="language-kotlin">
-fun sumar(a: Int, b: Int): Int {
+                    <pre class="code-block"><code class="language-kotlin">fun sumar(a: Int, b: Int): Int {
     return a + b
-}
-            </code></pre>
+}</code></pre>
                     <p>Esta función recibe dos parámetros (<code>a</code> y <code>b</code>) y devuelve la suma como un
                         entero (<code>Int</code>).</p>
                 </div>
@@ -129,12 +123,10 @@ fun sumar(a: Int, b: Int): Int {
                             </div>
                             <div class="flip-card-back">
                                 <h3>Ejemplo:</h3>
-                                <pre class="code-block"><code class="language-kotlin">
-// 'nombre' solo existe dentro de mostrarNombre
+                                <pre class="code-block"><code class="language-kotlin">// 'nombre' solo existe dentro de mostrarNombre
 fun mostrarNombre(nombre: String) {
     println("Hola $nombre")
-}
-                                </code></pre>
+}</code></pre>
                             </div>
                         </div>
                     </label>
@@ -151,12 +143,10 @@ fun mostrarNombre(nombre: String) {
                             </div>
                             <div class="flip-card-back">
                                 <h3>Ejemplo:</h3>
-                                <pre class="code-block"><code class="language-kotlin">
-fun calcularArea(base: Double, altura: Double): Double {
+                                <pre class="code-block"><code class="language-kotlin">fun calcularArea(base: Double, altura: Double): Double {
     val area = base * altura  // 'area' solo existe dentro de esta función
     return area
-}
-                                </code></pre>
+}</code></pre>
                             </div>
                         </div>
                     </label>
@@ -232,11 +222,9 @@ fun calcularArea(base: Double, altura: Double): Double {
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplos: </h3>
-                            <pre class="code-block"><code class="language-kotlin">
-fun saludar() {
+                            <pre class="code-block"><code class="language-kotlin">fun saludar() {
     println("Hola, bienvenido")
-}
-    </code></pre>
+}</code></pre>
 
                         </div>
                     </div>
@@ -260,11 +248,9 @@ fun saludar() {
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-fun mostrarMensaje() {
+                            <pre class="code-block"><code class="language-kotlin">fun mostrarMensaje() {
     println("Hola Mundo")
-}
-                        </code></pre>
+}</code></pre>
                         </div>
                     </div>
                 </label>
@@ -282,11 +268,9 @@ fun mostrarMensaje() {
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-fun mostrarNombre(nombre: String) {
+                            <pre class="code-block"><code class="language-kotlin">fun mostrarNombre(nombre: String) {
     println("Hola $nombre")
-}
-                        </code></pre>
+}</code></pre>
                         </div>
                     </div>
                 </label>
@@ -306,11 +290,9 @@ fun mostrarNombre(nombre: String) {
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-fun generarNumero(): Int {
+                            <pre class="code-block"><code class="language-kotlin">fun generarNumero(): Int {
     return 10
-}
-                        </code></pre>
+}</code></pre>
                         </div>
                     </div>
                 </label>
@@ -328,11 +310,9 @@ fun generarNumero(): Int {
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-fun sumar(a: Int, b: Int): Int {
+                            <pre class="code-block"><code class="language-kotlin">fun sumar(a: Int, b: Int): Int {
     return a + b
-}
-                        </code></pre>
+}</code></pre>
                         </div>
                     </div>
                 </label>
@@ -356,10 +336,8 @@ fun sumar(a: Int, b: Int): Int {
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-val cuadrado = { x: Int -> x * x }
-println(cuadrado(4))
-                        </code></pre>
+                            <pre class="code-block"><code class="language-kotlin">val cuadrado = { x: Int -> x * x }
+println(cuadrado(4))</code></pre>
                         </div>
                     </div>
                 </label>
@@ -378,11 +356,9 @@ println(cuadrado(4))
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-fun factorial(n: Int): Int {
+                            <pre class="code-block"><code class="language-kotlin">fun factorial(n: Int): Int {
     return if (n == 1) 1 else n * factorial(n - 1)
-}
-    </code></pre>
+}</code></pre>
                         </div>
                     </div>
                 </label>
@@ -403,11 +379,9 @@ fun factorial(n: Int): Int {
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-fun operar(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
+                            <pre class="code-block"><code class="language-kotlin">fun operar(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
     return operacion(a, b)
-}
-    </code></pre>
+}</code></pre>
                         </div>
                     </div>
                 </label>
@@ -426,13 +400,11 @@ fun operar(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre class="code-block"><code class="language-kotlin">
-suspend fun obtenerClimaDelServidor(): String {
+                            <pre class="code-block"><code class="language-kotlin">suspend fun obtenerClimaDelServidor(): String {
     println("3. (Segundo plano) Buscando datos en la nube...")
     delay(2000) // Simula una espera de red de 2 segundos
     return "Soleado, 25°C"
-}
-                            </code></pre>
+}</code></pre>
                         </div>
                     </div>
                 </label>
@@ -529,14 +501,12 @@ suspend fun obtenerClimaDelServidor(): String {
                 retorne su área.
             </p>
 
-            <pre class="code-block", style="min-height: 250px;"><code class="language-kotlin">
-fun calcularArea(base: Double, altura: Double): Double {
+            <pre class="code-block"><code class="language-kotlin">fun calcularArea(base: Double, altura: Double): Double {
     return base * altura
 }
 
 val area = calcularArea(5.0, 3.0)
-println("El área es: $area")
-            </code></pre>
+println("El área es: $area")</code></pre>
         </section>
 
         <!-- EJERCICIO 2 -->
@@ -546,8 +516,7 @@ println("El área es: $area")
                 Crear una función que reciba un número entero y determine si es par o impar.
             </p>
 
-            <pre class="code-block", style="min-height: 290px;"><code class="language-kotlin">
-fun esPar(numero: Int): Boolean {
+            <pre class="code-block"><code class="language-kotlin">fun esPar(numero: Int): Boolean {
     return numero % 2 == 0
 }
 
@@ -555,8 +524,7 @@ if (esPar(8)) {
     println("El número es par")
 } else {
     println("El número es impar")
-}
-            </code></pre>
+}</code></pre>
         </section>
 
     </div>

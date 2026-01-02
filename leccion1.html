@@ -59,9 +59,7 @@
                         <div class="flip-card-front">
                             <h3>Ejemplo</h3>
                             
-                            <pre class="code-block"><code class="language-kotlin">
-val resultado = (8 + 2) * 3
-                            </code></pre>
+                            <pre class="code-block"><code class="language-kotlin">val resultado = (8 + 2) * 3</code></pre>
                             <h4>Evaluación paso a paso:</h4>
                             <ol style="padding-left:25px;">
                                 <li>Se evalúa la expresión <code>(8 + 2)</code> → <code>10</code></li>
@@ -126,9 +124,7 @@ val resultado = (8 + 2) * 3
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>                        
-                            <pre style="margin-top:15px;"><code class="language-kotlin">
-val total = 15 + 5 * 2 //total = 25 
-                            </code></pre>
+                            <pre style="margin-top:15px;"><code class="language-kotlin">val total = 15 + 5 * 2 //total = 25 </code></pre>
                         </div>
                     </div>
                 </label>
@@ -146,10 +142,8 @@ val total = 15 + 5 * 2 //total = 25
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre><code class="language-kotlin">
-val edad = 18
-val esMayor = edad >= 18  // true
-                            </code></pre>
+                            <pre><code class="language-kotlin">val edad = 18
+val esMayor = edad >= 18  // true</code></pre>
                         </div>
                     </div>
                 </label>
@@ -174,11 +168,9 @@ val esMayor = edad >= 18  // true
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre style="margin-top:15px;"><code class="language-kotlin">
-val tieneEntrada = true
+                            <pre style="margin-top:15px;"><code class="language-kotlin">val tieneEntrada = true
 val edad = 20
-val puedeIngresar = tieneEntrada && edad >= 18  // true
-                            </code></pre>
+val puedeIngresar = tieneEntrada && edad >= 18  // true</code></pre>
                         </div>
                     </div>
                 </label>
@@ -202,10 +194,8 @@ val puedeIngresar = tieneEntrada && edad >= 18  // true
                         </div>
                         <div class="flip-card-back">
                             <h3>Ejemplo:</h3>
-                            <pre style="margin-top:15px;"><code class="language-kotlin">
-var saldo = 1000.0
-saldo -= 150.5  // saldo = 849.5
-                            </code></pre>
+                            <pre style="margin-top:15px;"><code class="language-kotlin">var saldo = 1000.0
+saldo -= 150.5  // saldo = 849.5</code></pre>
                         </div>
                     </div>
                 </label>
@@ -277,15 +267,13 @@ saldo -= 150.5  // saldo = 849.5
             </div><br>
 
             <h3>Ejemplo:</h3>
-            <pre class="code-block", style="min-height: 260px;"><code class="language-kotlin">
-fun calcularDescuento(precio: Double, porcentaje: Double): Double {
+            <pre class="code-block"><code class="language-kotlin">fun calcularDescuento(precio: Double, porcentaje: Double): Double {
     return precio * (porcentaje / 100)
 }
 
 val precioOriginal = 200.0
 val descuento = calcularDescuento(precioOriginal, 15.0)  // 30.0
-val precioFinal = precioOriginal - descuento  // 170.0
-            </code></pre>
+val precioFinal = precioOriginal - descuento  // 170.0</code></pre>
         </section>
 
         <!-- OPERADORES RELACIONALES -->
@@ -350,8 +338,7 @@ val precioFinal = precioOriginal - descuento  // 170.0
                 </table>  
             </div>
             <h3>Ejemplo:</h3>
-            <pre class="code-block", style="min-height: 300px;"><code class="language-kotlin">
-fun main() {
+            <pre class="code-block"><code class="language-kotlin">fun main() {
     val a = 10
     val b = 20
 
@@ -359,8 +346,8 @@ fun main() {
     println(a != b)   // true
     println(a >= 10)  // true
     println(b <= 15)  // false
-}
-            </code></pre>
+}</code></pre>
+            
         </section>
 
         <!-- OPERADORES LÓGICOS -->
@@ -405,8 +392,7 @@ fun main() {
             </div>
 
             <h3>Ejemplo práctico:</h3>
-            <pre class="code-block", style="min-height: 340px;"><code class="language-kotlin">
-fun verificarAcceso(edad: Int, tienePermiso: Boolean, esEmpleado: Boolean): Boolean {
+            <pre class="code-block"><code class="language-kotlin">fun verificarAcceso(edad: Int, tienePermiso: Boolean, esEmpleado: Boolean): Boolean {
     // Puede acceder si:
     // 1. Es mayor de edad Y tiene permiso
     // 2. O si es empleado (sin importar edad o permiso)
@@ -415,8 +401,7 @@ fun verificarAcceso(edad: Int, tienePermiso: Boolean, esEmpleado: Boolean): Bool
 
 val acceso1 = verificarAcceso(20, true, false)   // true
 val acceso2 = verificarAcceso(16, true, true)    // true (es empleado)
-val acceso3 = verificarAcceso(16, false, false)  // false
-            </code></pre>
+val acceso3 = verificarAcceso(16, false, false)  // false</code></pre>
         </section>
 
         <!-- OPERADORES DE INCREMENTO/DECREMENTO -->
@@ -430,76 +415,261 @@ val acceso3 = verificarAcceso(16, false, false)  // false
             <div class="examples-grid">
                 <div class="card">
                     <h3>Incremento</h3>
-                    <pre class="code-block"><code class="language-kotlin">
-var contador = 5
+                    <pre class="code-block", style="text-align: left;"><code class="language-kotlin">var contador = 5
 contador++      // Aumenta en 1: contador = 6
-contador += 3   // Aumenta en 3: contador = 9
-                    </code></pre>
+contador += 3   // Aumenta en 3: contador = 9</code></pre>
                 </div>
 
                 <div class="card">
                     <h3>Decremento</h3>
-                    <pre class="code-block"><code class="language-kotlin">
-var numero = 10
+                    <pre class="code-block", style="text-align: left;"><code class="language-kotlin">var numero = 10
 numero--       // Disminuye en 1: numero = 9
-numero -= 2    // Disminuye en 2: numero = 7
-                    </code></pre>
+numero -= 2    // Disminuye en 2: numero = 7</code></pre>
                 </div>
             </div>
         </section>
     </div><br>
 
-    <!-- EJERCICIOS PRÁCTICOS -->
+    <!-- EJERCICIOS -->
     <div class="content-page">
         
-        <h1>Ejercicios </h1>
-        <hr>
+        <h1>Ejercicios </h1><hr>
+        <!-- EJERCICIO 1 -->
         <div class="card">
-       
+            <section>
+                <div class="contenedor-degradado">
+                    <h2 style="color:white;">Ejercicio 1: Área del círculo y volumen del cilindro</h2>
+                </div>
+                <br>
+               <p> Escribir una función que calcule el área de un círculo y otra que calcule el volumen de un cilindro, utilizando la primera función.</p>
+            <h2> Solución</h2>
 
-        <!-- EJERCICIO -->
-        <section class="exercise">
-            <div class="contenedor-degradado" style="background:linear-gradient(to right, #0E7490, #0891B2, #67E8F9);">
-                <h2 style="color:white;">Ejercicio 1: Calculadora de IMC</h2>
-            </div>
-            <p>Crear una función que calcule el Índice de Masa Corporal (IMC) y determine la categoría.</p>
+            <ul class="list">
+                <li><strong>Paso 1: Definir la función del área del círculo</strong><br>
+                    Creamos una función que reciba el radio.</li>
+                <li><strong>Paso 2: Calcular el área del círculo</strong><br>
+                Usamos la fórmula: π × radio².</li>
+                <li><strong>Paso 3: Retornar el área</strong><br>
+                Devolvemos el valor calculado.</li>
+                <li><strong>Paso 4: Definir la función del volumen</strong><br>
+                Creamos una función con radio y altura.</li>
+                <li><strong>Paso 5: Calcular el volumen</strong><br>
+                El volumen de un cilindro se calcula con la fórmula: V= área del círculo × altura. Se reutiliza la función del área del círculo.</li>
+                <li><strong>Paso 6: Retornar el resultado</strong><br>
+                Usamos return para devolver el volumen.</li>
+                </ul>
+            
 
-            <h3>Procedimiento</h3>
-            <ol class="list">
-                <li>Recibir peso (kg) y altura (m) como parámetros</li>
-                <li>Calcular IMC: peso / (altura * altura)</li>
-                <li>Usar expresiones condicionales para determinar categoría</li>
-                <li>Retornar tanto el IMC como la categoría</li>
-            </ol>
+            <h2>Código</h2>
+            
+            <pre class="code-block", style="text-align: left; min-height: 400px; "><code class="language-kotlin">import kotlin.math.PI
+import kotlin.math.pow
 
-            <h3>Código</h3>
-            <pre class="code-block"><code class="language-kotlin">
+// Función para calcular el área de un círculo
+fun areaCirculo(radio: Double): Double {
+    return PI * radio.pow(2)
+}
+
+// Función para calcular el volumen de un cilindro usando el área del círculo
+fun volumenCilindro(radio: Double, altura: Double): Double {
+    val areaBase = areaCirculo(radio)
+    return areaBase * altura
+}</code></pre>
+        </section>
+        </div><br>
+
+        <!-- EJERCICIO 2 -->
+        <div class="card">
+            <section>
+                <div class="contenedor-degradado">
+                    <h2 style="color:white;">Ejercicio 2: Factorial de un número</h2>
+                </div>
+                <br>
+               <p>Escribir una función que calcule el factorial de un número. </p>
+            <h2> Solución</h2>
+
+            <ul class="list">
+                <li><strong>Paso 1: Definir la función </strong><br>
+                Creamos una función con un parámetro entero.</li>
+                <li><strong>Paso 2: Calcular el factorial </strong><br>
+                Multiplicamos los números desde 1 hasta n. Usamos una estructura condicional para calcular el factorial.</li>
+                <li><strong>Paso 3: Retornar el resultado </strong><br>
+                Usamos return para devolver el factorial.</li>
+                </ul>
+            
+
+            <h2>Código</h2>
+            
+            <pre class="code-block", style="text-align: left; min-height: 250px; "><code class="language-kotlin">fun factorial(n: Int): Int {
+    var resultado = 1
+    for (i in 1..n) {
+        resultado *= i
+    }
+    return resultado
+}</code></pre>
+        </section>
+        </div><br>
+
+        <!-- EJERCICIO 3 -->
+       <div class="card">
+       <section>
+        <div class="contenedor-degradado">
+            <h2 style="color:white;">Ejercicio 3: Distancia recorrida</h2>
+        </div>
+        <br>
+
+        <p>
+            Escribir una función que calcule la distancia recorrida por un objeto.
+        </p>
+
+        <h2>Solución</h2>
+
+        <ul class="list">
+            <li>
+                <strong>Paso 1: Definir la función</strong><br>
+                Creamos una función con dos parámetros: <code>velocidad</code> y <code>tiempo</code>.
+            </li>
+            <li>
+                <strong>Paso 2: Calcular la distancia</strong><br>
+                La distancia se calcula multiplicando la velocidad por el tiempo.
+            </li>
+            <li>
+                <strong>Paso 3: Retornar el resultado</strong><br>
+                Usamos <code>return</code> para devolver la distancia recorrida.
+            </li>
+        </ul>
+
+        <h2>Código</h2>
+
+        <pre class="code-block" style="text-align: left; min-height: 320px;">
+<code class="language-kotlin">fun calcularDistancia(velocidad: Double, tiempo: Double): Double {
+    val distancia = velocidad * tiempo
+    return distancia
+}
+
+// Uso de la función
+fun main() {
+    val resultado = calcularDistancia(60.0, 2.0)
+    println("Distancia recorrida: $resultado km")
+}</code></pre>
+       </section>
+       </div><br>
+
+       <!-- EJERCICIO 4 -->
+       <div class="card">
+    <section>
+        <div class="contenedor-degradado">
+            <h2 style="color:white;">Ejercicio 4: Cálculo de salario</h2>
+        </div>
+        <br>
+
+        <p>
+            Escribir una función que calcule el salario total de un empleado.
+        </p>
+
+        <h2>Solución</h2>
+
+        <ul class="list">
+            <li>
+                <strong>Paso 1: Definir la función</strong><br>
+                Creamos una función con dos parámetros: <code>horas_trabajadas</code> y <code>pago_por_hora</code>.
+            </li>
+            <li>
+                <strong>Paso 2: Calcular el salario</strong><br>
+                El salario se obtiene multiplicando las horas trabajadas por el pago por hora.
+            </li>
+            <li>
+                <strong>Paso 3: Retornar el resultado</strong><br>
+                Usamos <code>return</code> para devolver el salario total.
+            </li>
+        </ul>
+
+        <h2>Código</h2>
+
+         <pre class="code-block" style="text-align: left; min-height: 350px;">
+<code class="language-kotlin">
+fun calcularSalario(horasTrabajadas: Int, pagoPorHora: Double): Double {
+    val salario = horasTrabajadas * pagoPorHora
+    return salario
+}
+
+// Uso de la función
+fun main() {
+    val salarioTotal = calcularSalario(40, 5.5)
+    println("Salario total: $$salarioTotal")
+}
+</code>
+        </pre>
+    </section>
+       </div>
+
+        <!-- EJERCICIO 5 -->
+        <div class="card">
+    <section>
+        <div class="contenedor-degradado">
+            <h2 style="color:white;">Ejercicio 5: Calculadora de IMC</h2>
+        </div>
+        <br>
+
+        <p>
+            Crear una función que calcule el Índice de Masa Corporal (IMC) y determine la
+            categoría correspondiente.
+        </p>
+
+        <h2>Solución</h2>
+
+        <ul class="list">
+            <li>
+                <strong>Paso 1: Definir la función</strong><br>
+                Creamos una función que reciba el peso (kg) y la altura (m) como parámetros.
+            </li>
+            <li>
+                <strong>Paso 2: Calcular el IMC</strong><br>
+                Usamos la fórmula: peso / (altura × altura).
+            </li>
+            <li>
+                <strong>Paso 3: Determinar la categoría</strong><br>
+                Utilizamos expresiones condicionales para clasificar el IMC.
+            </li>
+            <li>
+                <strong>Paso 4: Retornar el resultado</strong><br>
+                Retornamos el IMC y la categoría usando un objeto Pair.
+            </li>
+        </ul>
+
+        <h2>Código</h2>
+
+        <pre class="code-block">
+<code class="language-kotlin">
 fun calcularIMC(peso: Double, altura: Double): Pair<Double, String> {
     val imc = peso / (altura * altura)
-    
+
     val categoria = when {
         imc < 18.5 -> "Bajo peso"
         imc < 25.0 -> "Peso normal"
         imc < 30.0 -> "Sobrepeso"
         else -> "Obesidad"
     }
-    
+
     return Pair(imc, categoria)
 }
 
 // Uso de la función
-val (imc, categoria) = calcularIMC(70.0, 1.75)
-println("IMC: ${String.format("%.2f", imc)}")  // Salida: IMC: 22.86
-println("Categoría: $categoria")                // Salida: Categoría: Peso normal
-            </code></pre>
-        </section>
+fun main() {
+    val (imc, categoria) = calcularIMC(70.0, 1.75)
+    println("IMC: ${String.format(\"%.2f\", imc)}")
+    println("Categoría: $categoria")
+}
+</code>
+        </pre>
+    </section>
+        </div><br>
+
     </div><br>
 
     <!-- RESUMEN FINAL -->
     <div class="content-page">
-        <h1>Resumen Final</h1>
-        <hr>
-
+        <h1>Resumen Final</h1><hr>
         <div class="examples-grid">
             <div class="card">
                 <h3>Expresiones</h3>
@@ -518,9 +688,276 @@ println("Categoría: $categoria")                // Salida: Categoría: Peso nor
                     del programa.</p>
             </div>
         </div>
-
-
     </div><br>
+
+    <div class="content-page">
+        <h1>Crea un composable Text reutilizable y muestra nombre,edad y carrrera</h1>
+
+       <h2>Text reutilizable</h2> 
+     <pre class="code-block"><code class="language-kotlin">package app.compose.textreutilizable.ui
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+
+@Composable
+fun DatosEstudiante(
+    nombre: String,
+    edad: Int,
+    carrera: String
+) {
+    Column(
+        modifier = Modifier
+            .background(Color(0xFF45C89C))
+            .fillMaxWidth()
+            .padding(16.dp)
+    ) {
+        Text(
+            text = "Nombre: $nombre",
+            fontFamily = FontFamily.Monospace,
+            fontWeight = FontWeight.Bold,
+            fontSize = 22.sp,
+            color = Color.White
+        )
+
+        Text(
+            text = "Edad: $edad años",
+            fontSize = 18.sp,
+            color = Color.White
+        )
+
+        Text(
+            text = "Carrera: $carrera",
+            fontSize = 18.sp,
+            color = Color.White
+        )
+    }
+}</code></pre>
+
+     <h2>Uso del Text reutilizable</h2>
+        <pre class="code-block"><code class="language-kotlin">package app.compose.textreutilizable.ui
+
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
+
+@Preview
+@Composable
+fun PantallaPrincipal() {
+    DatosEstudiante(
+        nombre = "Ofelia Jessica",
+        edad = 20,
+        carrera = "Ingeniería en Software"
+    )
+}</code></pre>
+    
+    <h2>Ejecución</h2>
+    <div class="image-container">
+            <img src="imagenes/textreutilizable.png" alt="Text reutilizable" style="width:100%;">
+        </div>
+
+</div><br>
+
+<div class="content-page">
+        <h1>Crea una calculadora básica (sumar,restar,mutiplicar y dividir)</h1>
+
+       <h2>Componentes</h2> 
+     <pre class="code-block"><code class="language-kotlin">package app.compose.textreutilizable.ui
+@Composable
+//Text
+fun TextUi(titulo: String, gradient: List<Color>) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(
+                brush = Brush.horizontalGradient(gradient)
+
+            )
+            .padding(20.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = titulo,
+            color = Color.White,
+            fontSize = 22.sp,
+            textAlign = TextAlign.Center,
+            fontWeight = FontWeight.Bold
+        )
+    }
+}
+    // TEXTFIELD REUTILIZABLE de Calculadora
+    @Composable
+    fun CampoTexto(valor: String, etiqueta: String, onChange: (String) -> Unit) {
+        TextField(
+            value = valor,
+            onValueChange = { nuevoValor ->
+                if (nuevoValor.matches(Regex("^\\d*\\.?\\d*$"))) {
+                    onChange(nuevoValor)
+                }
+            },
+            label = { Text(etiqueta) },
+            modifier = Modifier.fillMaxWidth(),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            colors = TextFieldDefaults.colors(
+                focusedContainerColor = Color(0xFFFAFAFA),
+                unfocusedContainerColor = Color(0xFFFAFAFA),
+                focusedTextColor = Color.Black,
+                unfocusedTextColor = Color.Black
+            )
+        )
+    }
+
+    // BOTÓN REUTILIZABLE
+    @Composable
+    fun BotonOperacion(texto: String, gradient: List<Color>, accion: () -> Unit) {
+        //se cambio Button a Box para poder usar degradado
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(55.dp)
+                .background(
+                    brush = Brush.horizontalGradient(gradient),
+                    shape = RoundedCornerShape(30.dp)
+                )
+                .clickable { accion() },
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = texto,
+                color = Color.White,
+                fontWeight = FontWeight.Bold
+            )
+
+        }
+        Spacer(Modifier.height(15.dp))
+    }
+
+    fun toDouble(texto: String): Double {
+        return texto.toDoubleOrNull() ?: 0.0
+    }
+
+    class OpcionesCalculadora {
+
+        fun sumar(a: Double, b: Double): Double = a + b
+
+        fun restar(a: Double, b: Double): Double = a - b
+
+        fun multiplicar(a: Double, b: Double): Double = a * b
+
+        fun dividir(a: Double, b: Double): String {
+            return if (b != 0.0) {
+                (a / b).toString()
+            } else {
+                "Error: división entre 0"
+            }
+        }
+    }
+
+</code></pre>
+
+
+     <h2>Calculadora</h2>
+
+        <pre class="code-block>"><code class="language-kotlin">@Preview
+@Composable
+fun Calculadora() {
+
+    val logic = OpcionesCalculadora()
+
+    var num1 by remember { mutableStateOf("") }
+    var num2 by remember { mutableStateOf("") }
+    var resultado by remember { mutableStateOf("") }
+
+    Scaffold(
+        topBar = {
+
+            TextUi(
+                titulo="CALCULADORA",
+                gradient = listOf(Color(0xFF0A7070), Color(0xFF51FFD0))
+
+            )
+
+        }
+    ) { padding ->
+
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            shape = RoundedCornerShape(24.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.White
+            )
+        ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+
+            // CAMPOS DE TEXTO
+            CampoTexto(num1, "Ingrese primer número") { num1 = it }
+            Spacer(Modifier.height(15.dp))
+
+            CampoTexto(num2, "Ingrese segundo número") { num2 = it }
+            Spacer(Modifier.height(15.dp))
+
+            CampoTexto(resultado, "Resultado") {}
+            Spacer(Modifier.height(25.dp))
+
+            // BOTONES
+            BotonOperacion(
+                texto= "SUMAR",
+                gradient = listOf(Color(0xFF1FE6C7), Color(0xFF00A0B2))
+            ) {
+                resultado = logic.sumar(toDouble(num1), toDouble(num2)).toString()
+            }
+
+            BotonOperacion(
+                texto= "RESTAR",
+                gradient = listOf(Color(0xFF1FE6C7), Color(0xFF00A0B2))
+            ) {
+                resultado = logic.restar(toDouble(num1), toDouble(num2)).toString()
+            }
+
+            BotonOperacion(
+                texto= "MULTIPLICAR",
+                gradient = listOf(Color(0xFF1FE6C7), Color(0xFF00A0B2))
+            ) {
+                resultado = logic.multiplicar(toDouble(num1), toDouble(num2)).toString()
+            }
+
+            BotonOperacion(
+                texto= "DIVIDIR",
+                gradient = listOf(Color(0xFF1FE6C7), Color(0xFF00A0B2))
+            ) {
+                resultado = logic.dividir(toDouble(num1), toDouble(num2))
+            }
+        }
+        }
+    }
+}</code></pre>
+<h2>Ejecución</h2>
+        <div class="image-container">
+            <img src="imagenes/calculadora1.png" alt="Text reutilizable" style="width:50%;">
+        </div>
+
+        <div class="image-container">
+            <img src="imagenes/calculadora2.png" alt="Text reutilizable" style="width:50%;"> 
+        </div>
+    
+</div> <br>       
 
     <!-- BOTÓN VOLVER -->
 
