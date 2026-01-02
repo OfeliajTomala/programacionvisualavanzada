@@ -111,6 +111,8 @@ header {
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra */
+
 }
 
 .card:hover {
@@ -192,7 +194,7 @@ header {
 .content-page h3 {
     font-size: 20px;
     color: var(--cyan-principal);
-    margin: 28px 0 16px;
+    margin: 8px 0 16px;
 }
 
 .content-page p {
@@ -300,6 +302,7 @@ header {
     max-height: 180px;
     overflow-y: auto;
     line-height: 1.6;
+    
 
 }
 .code-block code {
