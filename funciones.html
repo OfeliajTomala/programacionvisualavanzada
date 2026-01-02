@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones en Programación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- HEADER -->
+    <header class="internal-header">
+        <h2>FUNCIONES</h2>
+    </header>
+
+    <br>
+
+    <div class="content-page">
+        <p>
+            Las funciones son bloques de código que realizan una tarea específica y pueden
+            reutilizarse en diferentes partes de un programa. Su uso permite que los programas
+            sean más organizados, legibles y fáciles de mantener.
+        </p>
+
+        <p>Las funciones permiten:</p>
+
+        <ul class="list">
+            <li>Reutilizar código</li>
+            <li>Dividir un problema en partes más pequeñas</li>
+            <li>Mejorar la legibilidad del programa</li>
+            <li>Facilitar el mantenimiento del software</li>
+        </ul>
+    </div><br>
+
+    <!-- PARÁMETROS, VALORES DE RETORNO Y SCOPE -->
+    <div class="content-page">
+        <h1>Parámetros, valores de retorno y scope de variables en funciones</h1>
+        <hr>
+
+        <!-- PARÁMETROS -->
+        <section>
+            <h2>Parámetros de una función</h2>
+
+            <p>
+                Son variables que se definen en la cabecera de la función para recibir valores
+                cuando la función es llamada.
+            </p>
+
+            <p>
+                Permiten que la función reciba datos externos y los utilice para realizar
+                operaciones o tareas.
+            </p>
+
+            <h3>Ejemplo:</h3>
+            <pre class="code-block"><code class="language-kotlin">
+fun mostrarNombre(nombre: String) {
+    println("Hola $nombre")
+}
+            </code></pre>
+
+        </section>
+
+        <!--VALORES DE RETORNO -->
+        <section>
+            <h2>Valores de retorno</h2>
+
+            <p>
+                Es el valor que la función devuelve después de ejecutar su código, para que
+                pueda ser usado en otro lugar del programa.
+            </p>
+            <p>
+                Permite que la función entregue un resultado que puede ser asignado, evaluado
+                o utilizado posteriormente.
+            </p>
+            <p>
+                Se especifica el tipo de retorno después de los paréntesis de los parámetros,
+                usando <code>: Tipo</code>, y se usa la palabra clave <code>return</code> para devolver el valor.
+            </p>
+            <div class="examples-grid">
+                <div class="card">
+                    <h3>Ejemplo sin retorno (void en otros lenguajes):</h3>
+                    <pre class="code-block"><code class="language-kotlin">
+fun mostrarMensaje() {
+    println("Hola Mundo")
+}
+            </code></pre>
+
+                    <p>Esta función no devuelve nada (su tipo implícito es <code>Unit</code> en Kotlin).</p>
+                </div>
+                <div class="card">
+                    <h3>Ejemplo con retorno:</h3>
+                    <pre class="code-block"><code class="language-kotlin">
+fun sumar(a: Int, b: Int): Int {
+    return a + b
+}
+            </code></pre>
+                    <p>Esta función recibe dos parámetros (<code>a</code> y <code>b</code>) y devuelve la suma como un
+                        entero (<code>Int</code>).</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!--SCOPE DE VARIABLES -->
+        <section>
+            <h2>Scope (alcance) de las variables</h2>
+            <p>
+                El scope de una variable es la región del código donde esa variable es
+                accesible o válida.
+            </p>
+
+            <h3>Tipos en el contexto de funciones:</h3>
+
+            <div class="examples-grid">
+                <!-- Variables parámetro -->
+                <div class="flip-card">
+                    <label>
+                        <input type="checkbox">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>a) Variables parámetro</h3>
+                                <p>Solo existen dentro de la función. Son variables locales creadas al llamar la
+                                    función.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ejemplo:</h3>
+                                <pre class="code-block"><code class="language-kotlin">
+// 'nombre' solo existe dentro de mostrarNombre
+fun mostrarNombre(nombre: String) {
+    println("Hola $nombre")
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Variables locales -->
+                <div class="flip-card">
+                    <label>
+                        <input type="checkbox">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>b) Variables locales dentro de la función</h3>
+                                <p>Declaradas dentro de la función y solo accesibles ahí.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ejemplo:</h3>
+                                <pre class="code-block"><code class="language-kotlin">
+fun calcularArea(base: Double, altura: Double): Double {
+    val area = base * altura  // 'area' solo existe dentro de esta función
+    return area
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <!-- Variables globales -->
+                <div class="flip-card">
+                    <label>  
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>c) Variables globales (fuera de funciones)</h3>
+                                <p>
+                                    Si declaras una variable
+                                    fuera de cualquier función o clase, puede ser accesible en todo el programa
+                                    dependiendo del contexto.
+                                </p>
+                            </div>
+        </section>
+
+    </div><br>
+    
+    <!-- CLASIFICACIÓN DE LAS FUNCIONES -->
+    <div class="content-page">
+        <h1>Clasificación de las funciones en programación</h1>
+        <hr>
+
+        <p>
+            Las funciones pueden clasificarse de diferentes maneras según su origen,
+            la forma en que reciben datos y el tipo de comportamiento que presentan.
+
+        </p>
+
+        <!-- SEGÚN SU ORIGEN -->
+        <h2>Según su origen</h2>
+        <div class="examples-grid">
+            <!--Funciones de sistema (Built-in)-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones de Sistema (Built-in)</h3>
+                            <p>
+                                Son funciones que ya vienen incorporadas en el lenguaje de programación
+                                y permiten realizar tareas comunes sin necesidad de programarlas desde cero.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplos </h3>
+                            <ul class="list">
+                                <li><code>println()</code> en Kotlin</li>
+                                <li><code>print()</code> en Python</li>
+                                <li><code>console.log()</code> en JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <!--Funciones definidas por el usuario-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones Definidas por el Usuario</h3>
+                            <p>
+                                Son funciones creadas por el programador para resolver problemas específicos
+                                dentro de una aplicación y permitir la reutilización del código.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplos: </h3>
+                            <pre class="code-block"><code class="language-kotlin">
+fun saludar() {
+    println("Hola, bienvenido")
+}
+    </code></pre>
+
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div><br>
+
+        <!-- SEGÚN PARÁMETROS Y RETORNO -->
+        <h2>Según sus parámetros y retorno</h2>
+        <div class="examples-grid">
+            <!--Funciones sin parámetros ni retorno-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones sin parámetros ni retorno</h3>
+                            <p>
+                                Ejecutan una acción fija y no devuelven ningún valor.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+fun mostrarMensaje() {
+    println("Hola Mundo")
+}
+                        </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <!--Funciones con parámetros y sin retorno-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones con parámetros y sin retorno</h3>
+                            <p>
+                                Reciben datos para trabajar, pero no devuelven resultados al programa principal.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+fun mostrarNombre(nombre: String) {
+    println("Hola $nombre")
+}
+                        </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="examples-grid">
+            <!--Funciones sin parámetros y con retorno-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones sin parámetros y con retorno</h3>
+                            <p>
+                                No reciben datos externos, pero devuelven un valor como resultado.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+fun generarNumero(): Int {
+    return 10
+}
+                        </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <!--Funciones con parámetros y retorno-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones con parámetros y retorno</h3>
+                            <p>
+                                Reciben datos, los procesan y devuelven un resultado. Son las más utilizadas.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+fun sumar(a: Int, b: Int): Int {
+    return a + b
+}
+                        </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div><br>
+
+        <!-- TIPOS ESPECIALES -->
+        <h2>Tipos Especiales de Funciones</h2>
+        <div class="examples-grid">
+            <!--Funciones Anónimas-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones Anónimas (Lambdas)</h3>
+                            <p>
+                                Son funciones que no tienen un nombre definido y se utilizan para tareas
+                                rápidas o como parámetros de otras funciones.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+val cuadrado = { x: Int -> x * x }
+println(cuadrado(4))
+                        </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <!--Funciones Recursivas-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones Recursivas</h3>
+                            <p>
+                                Son funciones que se llaman a sí mismas para resolver un problema que
+                                puede dividirse en subproblemas más pequeños.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+fun factorial(n: Int): Int {
+    return if (n == 1) 1 else n * factorial(n - 1)
+}
+    </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="examples-grid">
+            <!--Funciones de Orden Superior-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones de Orden Superior</h3>
+                            <p>
+                                Son funciones que pueden recibir otras funciones como parámetros o devolver
+                                una función como resultado.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+fun operar(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
+    return operacion(a, b)
+}
+    </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <!--Funciones Asíncronas-->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Funciones Asíncronas</h3>
+                            <p>
+                                Permiten ejecutar tareas sin bloquear el flujo principal del programa.
+                                En Kotlin, se implementan principalmente mediante <strong>coroutines</strong>.
+                            </p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo:</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+suspend fun obtenerClimaDelServidor(): String {
+    println("3. (Segundo plano) Buscando datos en la nube...")
+    delay(2000) // Simula una espera de red de 2 segundos
+    return "Soleado, 25°C"
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div><br>
+
+    </div><br>
+
+    <div class="content-page">
+        <!-- CUADRO COMPARATIVO -->
+        <h2>Cuadro comparativo de clasificación de funciones</h2>
+
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Características</th>
+                        <th>Cuándo usar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Funciones de Sistema</td>
+                        <td>Incluidas en el lenguaje, permiten realizar tareas comunes sin programarlas desde cero.</td>
+                        <td>Cuando se necesita mostrar información, leer datos o realizar operaciones básicas.</td>
+                    </tr>
+                    <tr>
+                        <td>Funciones del Usuario</td>
+                        <td>Son creadas por el programador para resolver problemas específicos.</td>
+                        <td>Cuando se desea reutilizar código y organizar mejor el programa.</td>
+                    </tr>
+                    <tr>
+                        <td>Funciones con Parámetros y Retorno</td>
+                        <td>Reciben datos, los procesan y devuelven un resultado.</td>
+                        <td>Cuando se requiere obtener un valor a partir de una operación.</td>
+                    </tr>
+                    <tr>
+                        <td>Funciones Anónimas</td>
+                        <td>No tienen nombre y se utilizan para tareas cortas.</td>
+                        <td>Cuando se necesita una función rápida sin reutilización.</td>
+                    </tr>
+                    <tr>
+                        <td>Funciones Recursivas</td>
+                        <td>Se llaman a sí mismas para resolver problemas repetitivos.</td>
+                        <td>Para cálculos como factoriales o recorridos de estructuras.</td>
+                    </tr>
+                    <tr>
+                        <td>Funciones de Orden Superior</td>
+                        <td>Reciben o devuelven otras funciones.</td>
+                        <td>Cuando se trabaja con programación funcional.</td>
+                    </tr>
+                    <tr>
+                        <td>Funciones Asíncronas</td>
+                        <td>Permiten ejecutar tareas sin bloquear el programa.</td>
+                        <td>En operaciones que requieren espera, como acceso a servidores.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><br>
+
+    <!-- IMÁGENES -->
+    <div class="content-page">
+        <h1>Estructura de una función</h1>
+        <hr>
+
+        <p>La estructura básica de una función incluye los siguientes elementos:</p>
+
+        <div class="image-container">
+            <img src="imagenes/estructurafuncion.png" alt="Diagrama de función" style="width:100%;">
+        </div>
+    </div><br>
+
+    <div class="content-page">
+        <h1>Diagrama: Flujo básico de una función</h1>
+        <hr>
+        <div class="image-container">
+            <img src="imagenes/flujobasico.png" alt="Diagrama de función" style="width:30%;">
+        </div>
+    </div>
+    <br>
+
+    <!-- EJERCICIOS PRÁCTICOS -->
+    <div class="content-page">
+        <h1>Ejercicios prácticos</h1>
+        <hr>
+
+        <!-- EJERCICIO 1 -->
+        <section class="exercise">
+            <h3>Ejercicio 1: Calcular el área de un rectángulo</h3>
+            <p>
+                Crear una función que reciba la base y la altura de un rectángulo y
+                retorne su área.
+            </p>
+
+            <pre class="code-block"><code class="language-kotlin">
+fun calcularArea(base: Double, altura: Double): Double {
+    return base * altura
+}
+
+val area = calcularArea(5.0, 3.0)
+println("El área es: $area")
+            </code></pre>
+        </section>
+
+        <!-- EJERCICIO 2 -->
+        <section class="exercise">
+            <h3>Ejercicio 2: Verificar si un número es par</h3>
+            <p>
+                Crear una función que reciba un número entero y determine si es par o impar.
+            </p>
+
+            <pre class="code-block"><code class="language-kotlin">
+fun esPar(numero: Int): Boolean {
+    return numero % 2 == 0
+}
+
+if (esPar(8)) {
+    println("El número es par")
+} else {
+    println("El número es impar")
+}
+            </code></pre>
+        </section>
+
+    </div>
+
+    <br>
+
+    <!-- VIDEO -->
+    <div class="content-page">
+        <h1>Video explicativo</h1>
+        <hr>
+
+        <p>
+            En el siguiente video se explica la teoría de las funciones y el desarrollo
+            de los ejercicios prácticos paso a paso.
+        </p>
+
+        <div class="contenedor-degradado">
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                <iframe src="https://drive.google.com/file/d/ID_DEL_VIDEO/preview"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+
+</body>
+
+</html>

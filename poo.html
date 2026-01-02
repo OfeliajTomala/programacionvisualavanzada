@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Programación Orientada a Objetos (POO)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- HEADER -->
+    <header class="internal-header">
+        <h2>PROGRAMACIÓN ORIENTADA A OBJETOS</h2>
+    </header>
+
+    <br>
+
+    <!-- INTRODUCCIÓN A POO -->
+    <div class="content-page">
+        <h1>¿Qué es la Programación Orientada a Objetos?</h1>
+        <hr>
+        
+        <p>
+            La Programación Orientada a Objetos (POO) es un paradigma de programación que organiza el código alrededor de <strong>objetos</strong> en lugar de funciones y lógica. Un objeto es una entidad que combina <strong>datos (atributos)</strong> y <strong>comportamientos (métodos)</strong> relacionados.
+        </p>
+        
+        <p>La POO se basa en cuatro principios fundamentales:</p>
+        
+        <ul class="list">
+            <li><strong>Encapsulamiento</strong>: Ocultar los detalles internos y proteger los datos</li>
+            <li><strong>Herencia</strong>: Crear nuevas clases basadas en clases existentes</li>
+            <li><strong>Polimorfismo</strong> - Capacidad de objetos diferentes de responder al mismo mensaje</li>
+            <li><strong>Abstracción</strong> - Simplificar la realidad extrayendo sus características esenciales</li>
+        </ul>
+    </div><br>
+
+    <!-- CLASES Y OBJETOS -->
+    <div class="content-page">
+        <h1>Clases y Objetos</h1>
+        <hr>
+        
+        <!-- CLASES -->
+        <section>
+            <h2>Clases</h2>
+            <p>Una <strong>clase</strong> es una plantilla o molde que define las características y comportamientos que tendrán los objetos creados a partir de ella. Piensa en una clase como el plano de una casa.</p>
+            
+            <h3>Estructura de una clase:</h3>
+            <div class="examples-grid">
+                <div class="flip-card">
+                    <label>
+                        <input type="checkbox">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Definición de Clase</h3>
+                                <p>Una clase típica incluye: nombre, atributos (variables) y métodos (funciones).</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ejemplo en Kotlin:</h3>
+                                <pre class="code-block"><code class="language-kotlin">
+class Persona {
+    // Atributos (propiedades)
+    var nombre: String = ""
+    var edad: Int = 0
+    
+    // Métodos (comportamientos)
+    fun saludar() {
+        println("Hola, me llamo $nombre")
+    }
+    
+    fun cumplirAnios() {
+        edad++
+        println("¡Ahora tengo $edad años!")
+    }
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+        
+        <!-- OBJETOS -->
+        <section>
+            <h2>Objetos</h2>
+            <p>Un <strong>objeto</strong> es una instancia concreta de una clase. Si la clase es el plano, el objeto es la casa construida.</p>
+            
+            <h3>Creación de objetos:</h3>
+            <div class="examples-grid">
+                <div class="flip-card">
+                    <label>
+                        <input type="checkbox">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Instanciación</h3>
+                                <p>Para crear un objeto, se instancia la clase usando el constructor.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ejemplo:</h3>
+                                <pre class="code-block"><code class="language-kotlin">
+// Crear objetos (instancias) de la clase Persona
+val persona1 = Persona()
+persona1.nombre = "Ana"
+persona1.edad = 25
+
+val persona2 = Persona()
+persona2.nombre = "Carlos"
+persona2.edad = 30
+
+// Usar los métodos del objeto
+persona1.saludar()  // Salida: "Hola, me llamo Ana"
+persona2.saludar()  // Salida: "Hola, me llamo Carlos"
+                                </code></pre>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+        
+        <!-- DIAGRAMA CLASE-OBJETO -->
+        <section>
+            <h2>Relación Clase-Objeto</h2>
+            <div class="image-container">
+                <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="Diagrama Clase-Objeto" style="width:100%; max-width:600px;">
+                <p class="image-caption">Una clase es el molde, los objetos son las instancias concretas</p>
+            </div>
+        </section>
+    </div><br>
+
+    <!-- LOS 4 PILARES DE LA POO -->
+    <div class="content-page">
+        <h1>Los 4 Pilares de la POO</h1>
+        <hr>
+        
+        <!-- ENCAPSULAMIENTO -->
+        <section>
+            <h2>1. Encapsulamiento</h2>
+            <p>El encapsulamiento es el principio de ocultar los detalles internos de un objeto y exponer solo lo necesario a través de una interfaz pública.</p>
+            
+            <div class="examples-grid">
+                <div class="flip-card">
+                    <label>
+                        <input type="checkbox">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Beneficios</h3>
+                                <ul>
+                                    <li>Protege los datos internos</li>
+                                    <li>Permite cambiar la implementación sin afectar a quien usa el objeto</li>
+                                    <li>Mejora la seguridad y mantenibilidad</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ejemplo en Kotlin:</h3>
+                                <pre class="code-block"><code class="language-kotlin">
+class CuentaBancaria {
+    // Atributo privado (encapsulado)
+    private var saldo: Double = 0.0
+    
+    // Métodos públicos para interactuar con el saldo
+    fun depositar(cantidad: Double) {
+        if (cantidad > 0) {
+            saldo += cantidad
+            println("Depósito exitoso. Saldo actual: $saldo")
+        }
+    }
+    
+    fun retirar(cantidad: Double): Boolean {
+        if (cantidad > 0 && cantidad <= saldo) {
+            saldo -= cantidad
+            println("Retiro exitoso. Saldo actual: $saldo")
+            return true
+        }
+        println("Fondos insuficientes")
+        return false
+    }
+    
+    fun consultarSaldo(): Double {
+        return saldo
+    }
+}
+
+// Uso
+val miCuenta = CuentaBancaria()
+miCuenta.depositar(1000.0)
+// miCuenta.saldo = 5000  // ERROR: saldo es privado
+                                </code></pre>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+        
+        <!-- HERENCIA -->
+        <section>
+            <h2>2. Herencia</h2>
+            <p>La herencia permite crear nuevas clases (hijas) basadas en clases existentes (padres), reutilizando y extendiendo su funcionalidad.</p>
+            
+            <div class="examples-grid">
+                <div class="flip-card">
+                    <label>
+                        <input type="checkbox">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Ventajas</h3>
+                                <ul>
+                                    <li>Reutilización de código</li>
+                                    <li>Jerarquía de clases</li>
+                                    <li>Extensibilidad del sistema</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ejemplo en Kotlin:</h3>
+                                <pre class="code-block"><code class="language-kotlin">
+// Clase padre
+open class Vehiculo(val marca: String, val modelo: String) {
+    fun arrancar() {
+        println("El vehículo $marca $modelo ha arrancado")
+    }
+    
+    open fun detener() {
+        println("El vehículo se ha detenido")
+    }
+}
+
+// Clase hija que hereda de Vehiculo
+class Automovil(marca: String, modelo: String, val puertas: Int) 
+    : Vehiculo(marca, modelo) {
+    
+    fun abrirMaletero() {
+        println("Maletero abierto")
+    }
+    
+    override fun detener() {
+        println("El automóvil $marca $modelo se ha detenido con frenos ABS")
+    }
+}
+
+// Clase hija diferente
+class Motocicleta(marca: String, modelo: String, val cilindrada: Int) 
+    : Vehiculo(marca, modelo) {
+    
+    fun hacerCaballito() {
+        println("¡Caballito!")
+    }
+}
+
+// Uso
+val miAuto = Automovil("Toyota", "Corolla", 4)
+miAuto.arrancar()  // Método heredado
+miAuto.abrirMaletero()  // Método propio
+                                </code></pre>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+        
+        <!-- POLIMORFISMO -->
+        <section>
+            <h2>3. Polimorfismo</h2>
+            <p>El polimorfismo permite que objetos de diferentes clases respondan al mismo mensaje (método) de manera diferente.</p>
+            
+            <div class="examples-grid">
+                <div class="flip-card">
+                    <label>
+                        <input type="checkbox">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Tipos de Polimorfismo</h3>
+                                <ul>
+                                    <li><strong>Polimorfismo de subtipo:</strong> Métodos con misma firma en clases diferentes</li>
+                                    <li><strong>Polimorfismo paramétrico:</strong> Genéricos</li>
+                                    <li><strong>Sobrecarga:</strong> Múltiples métodos con mismo nombre pero diferentes parámetros</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ejemplo en Kotlin:</h3>
+                                <pre class="code-block"><code class="language-kotlin">
+// Clase base
+open class Animal(val nombre: String) {
+    open fun hacerSonido() {
+        println("El animal hace un sonido")
+    }
+}
+
+// Clases hijas con polimorfismo
+class Perro(nombre: String) : Animal(nombre) {
+    override fun hacerSonido() {
+        println("$nombre dice: ¡Guau guau!")
+    }
+}
+
+class Gato(nombre: String) : Animal(nombre) {
+    override fun hacerSonido() {
+        println("$nombre dice: ¡Miau miau!")
+    }
+}
+
+class Pajaro(nombre: String) : Animal(nombre) {
+    override fun hacerSonido() {
+        println("$nombre dice: ¡Pío pío!")
+    }
+}
+
+// Uso polimórfico
+val animales = listOf(
+    Perro("Rex"),
+    Gato("Mishi"),
+    Pajaro("Piolín"),
+    Animal("Genérico")
+)
+
+for (animal in animales) {
+    animal.hacerSonido()  // Cada animal responde diferente
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ABSTRACCIÓN -->
+        <section>
+            <h2>4. Abstracción</h2>
+            <p>La abstracción consiste en simplificar la realidad extrayendo solo las características esenciales de un objeto, ignorando los detalles irrelevantes.</p>
+            
+            <div class="examples-grid">
+                <div class="flip-card">
+                    <label>
+                        <input type="checkbox">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Implementación</h3>
+                                <p>Se logra mediante:</p>
+                                <ul>
+                                    <li>Clases abstractas</li>
+                                    <li>Interfaces</li>
+                                    <li>Métodos abstractos</li>
+                                </ul>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ejemplo en Kotlin:</h3>
+                                <pre class="code-block"><code class="language-kotlin">
+// Clase abstracta (no se puede instanciar directamente)
+abstract class Figura {
+    // Método abstracto (sin implementación)
+    abstract fun calcularArea(): Double
+    
+    // Método concreto (con implementación)
+    fun describir() {
+        println("Esta es una figura geométrica")
+    }
+}
+
+// Clases concretas que implementan la abstracción
+class Rectangulo(val base: Double, val altura: Double) : Figura() {
+    override fun calcularArea(): Double {
+        return base * altura
+    }
+}
+
+class Circulo(val radio: Double) : Figura() {
+    override fun calcularArea(): Double {
+        return Math.PI * radio * radio
+    }
+}
+
+// Uso
+val figuras = listOf(
+    Rectangulo(5.0, 3.0),
+    Circulo(2.0)
+)
+
+for (figura in figuras) {
+    println("Área: ${figura.calcularArea()}")
+    figura.describir()
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+        
+        <!-- TABLA RESUMEN -->
+        <section>
+            <h2>Resumen de los 4 Pilares</h2>
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pilar</th>
+                            <th>Definición</th>
+                            <th>Beneficio Principal</th>
+                            <th>Analogía</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Encapsulamiento</td>
+                            <td>Ocultar detalles internos y exponer solo interfaz pública</td>
+                            <td>Seguridad y mantenibilidad</td>
+                            <td>Cápsula de medicina: oculta lo interno, muestra cómo usarla</td>
+                        </tr>
+                        <tr>
+                            <td>Herencia</td>
+                            <td>Crear nuevas clases basadas en clases existentes</td>
+                            <td>Reutilización de código</td>
+                            <td>Árbol genealógico: características que pasan de padres a hijos</td>
+                        </tr>
+                        <tr>
+                            <td>Polimorfismo</td>
+                            <td>Objetos diferentes responden al mismo mensaje de forma distinta</td>
+                            <td>Flexibilidad y extensibilidad</td>
+                            <td>Botones: cada uno hace algo diferente al presionarlo</td>
+                        </tr>
+                        <tr>
+                            <td>Abstracción</td>
+                            <td>Simplificar la realidad mostrando solo lo esencial</td>
+                            <td>Reducción de complejidad</td>
+                            <td>Mapa: muestra solo lo importante, no cada árbol y casa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div><br>
+
+    <!-- MODELADO DE PROBLEMAS CON OBJETOS -->
+    <div class="content-page">
+        <h1>Pensamiento Orientado a Objetos</h1>
+        <hr>
+        
+        <h2>¿Cómo modelar problemas usando objetos?</h2>
+        
+        <p>El proceso de modelado orientado a objetos sigue estos pasos:</p>
+        
+        <div class="examples-grid">
+            <div class="card">
+                <h3>1. Identificar Objetos</h3>
+                <p>Busca sustantivos en la descripción del problema. Cada sustantivo importante puede ser un objeto.</p>
+                <p><strong>Ejemplo:</strong> En un sistema bancario: Cliente, Cuenta, Transacción, Sucursal.</p>
+            </div>
+            
+            <div class="card">
+                <h3>2. Definir Atributos</h3>
+                <p>Para cada objeto, identifica sus características (adjetivos).</p>
+                <p><strong>Ejemplo:</strong> Cliente: nombre, dirección, teléfono, DNI.</p>
+            </div>
+            
+            <div class="card">
+                <h3>3. Identificar Comportamientos</h3>
+                <p>Busca verbos asociados a cada objeto (qué puede hacer).</p>
+                <p><strong>Ejemplo:</strong> Cuenta: depositar(), retirar(), consultarSaldo().</p>
+            </div>
+            
+            <div class="card">
+                <h3>4. Establecer Relaciones</h3>
+                <p>Determina cómo se relacionan los objetos entre sí.</p>
+                <p><strong>Ejemplo:</strong> Un Cliente "tiene" una o más Cuentas.</p>
+            </div>
+        </div>
+        
+        <h3>Ejemplo Completo: Sistema de Biblioteca</h3>
+        <div class="code-block">
+            <code>
+// 1. Identificar objetos principales: Libro, Usuario, Préstamo
+// 2. Definir atributos para cada objeto
+// 3. Identificar comportamientos (métodos)
+// 4. Establecer relaciones: Usuario -> Préstamo -> Libro
+
+class Libro(val titulo: String, val autor: String, val ISBN: String) {
+    var disponible: Boolean = true
+    
+    fun prestar(): Boolean {
+        if (disponible) {
+            disponible = false
+            return true
+        }
+        return false
+    }
+    
+    fun devolver() {
+        disponible = true
+    }
+}
+
+class Usuario(val nombre: String, val id: String) {
+    val librosPrestados = mutableListOf<Libro>()
+    
+    fun tomarPrestado(libro: Libro): Boolean {
+        if (libro.prestar()) {
+            librosPrestados.add(libro)
+            return true
+        }
+        return false
+    }
+}
+
+// 5. Crear interacciones entre objetos
+val libro1 = Libro("Cien años de soledad", "G. Márquez", "123-456")
+val usuario1 = Usuario("Ana García", "U001")
+
+if (usuario1.tomarPrestado(libro1)) {
+    println("Préstamo exitoso")
+}
+            </code>
+        </div>
+    </div><br>
+
+    <!-- EJERCICIOS PRÁCTICOS -->
+    <div class="content-page">
+        <h1>Ejercicios Prácticos</h1>
+        <hr>
+        
+        <!-- EJERCICIO 1 -->
+        <section class="exercise">
+            <h2>Ejercicio 1: Sistema de Figuras Geométricas</h2>
+            <p><strong>Problema:</strong> Crea un sistema para calcular áreas y perímetros de diferentes figuras geométricas usando los principios de POO.</p>
+            
+            <h3>Requisitos:</h3>
+            <ul class="list">
+                <li>Usar una clase abstracta Figura con métodos abstractos calcularArea() y calcularPerimetro()</li>
+                <li>Crear al menos 3 clases hijas (Triangulo, Rectangulo, Circulo)</li>
+                <li>Implementar polimorfismo para manejar diferentes figuras</li>
+                <li>Usar encapsulamiento para proteger los atributos</li>
+            </ul>
+            
+            <h3>Solución:</h3>
+            <pre class="code-block"><code class="language-kotlin">
+// Clase abstracta (Abstracción)
+abstract class Figura {
+    abstract fun calcularArea(): Double
+    abstract fun calcularPerimetro(): Double
+    
+    fun describir() {
+        println("Figura geométrica - Área: ${calcularArea()}, Perímetro: ${calcularPerimetro()}")
+    }
+}
+
+// Clase Rectangulo (Herencia)
+class Rectangulo(private val base: Double, private val altura: Double) : Figura() {
+    // Encapsulamiento: atributos privados
+    
+    override fun calcularArea(): Double {
+        return base * altura
+    }
+    
+    override fun calcularPerimetro(): Double {
+        return 2 * (base + altura)
+    }
+}
+
+// Clase Circulo (Herencia)
+class Circulo(private val radio: Double) : Figura() {
+    override fun calcularArea(): Double {
+        return Math.PI * radio * radio
+    }
+    
+    override fun calcularPerimetro(): Double {
+        return 2 * Math.PI * radio
+    }
+}
+
+// Clase Triangulo (Herencia)
+class Triangulo(private val lado1: Double, private val lado2: Double, 
+                private val lado3: Double, private val altura: Double) : Figura() {
+    
+    override fun calcularArea(): Double {
+        return (lado1 * altura) / 2
+    }
+    
+    override fun calcularPerimetro(): Double {
+        return lado1 + lado2 + lado3
+    }
+}
+
+// Uso con Polimorfismo
+fun main() {
+    val figuras: List<Figura> = listOf(
+        Rectangulo(5.0, 3.0),
+        Circulo(2.0),
+        Triangulo(3.0, 4.0, 5.0, 2.4)
+    )
+    
+    // Polimorfismo: cada figura responde de manera diferente
+    for (figura in figuras) {
+        figura.describir()
+    }
+}
+            </code></pre>
+        </section>
+        
+        <!-- EJERCICIO 2 -->
+        <section class="exercise">
+            <h2>Ejercicio 2: Sistema de Empleados</h2>
+            <p><strong>Problema:</strong> Modela un sistema de nómina para diferentes tipos de empleados en una empresa.</p>
+            
+            <h3>Requisitos:</h3>
+            <ul class="list">
+                <li>Clase base Empleado con atributos comunes (nombre, id, salarioBase)</li>
+                <li>Clases hijas para diferentes tipos: EmpleadoTiempoCompleto, EmpleadoPorHoras, Gerente</li>
+                <li>Cada tipo calcula su salario de manera diferente</li>
+                <li>Implementar un método polimórfico calcularSalario()</li>
+                <li>Agregar un bono especial para Gerente</li>
+            </ul>
+            
+            <h3>Solución:</h3>
+            <pre class="code-block"><code class="language-kotlin">
+// Clase base (Abstracción)
+open class Empleado(val nombre: String, val id: String, protected val salarioBase: Double) {
+    // Método que será sobrescrito (Polimorfismo)
+    open fun calcularSalario(): Double {
+        return salarioBase
+    }
+    
+    fun mostrarInformacion() {
+        println("$nombre (ID: $id) - Salario: $${calcularSalario()}")
+    }
+}
+
+// Empleado de tiempo completo (Herencia)
+class EmpleadoTiempoCompleto(nombre: String, id: String, salarioBase: Double) 
+    : Empleado(nombre, id, salarioBase) {
+    
+    override fun calcularSalario(): Double {
+        return salarioBase  // Salario fijo mensual
+    }
+}
+
+// Empleado por horas (Herencia)
+class EmpleadoPorHoras(nombre: String, id: String, val horasTrabajadas: Double, 
+                       val tarifaPorHora: Double) : Empleado(nombre, id, 0.0) {
+    
+    override fun calcularSalario(): Double {
+        return horasTrabajadas * tarifaPorHora
+    }
+}
+
+// Gerente (Herencia con funcionalidad adicional)
+class Gerente(nombre: String, id: String, salarioBase: Double, 
+              val bono: Double) : Empleado(nombre, id, salarioBase) {
+    
+    override fun calcularSalario(): Double {
+        return salarioBase + bono
+    }
+    
+    fun dirigirReunion() {
+        println("$nombre está dirigiendo una reunión")
+    }
+}
+
+// Sistema principal
+fun main() {
+    val empleados = listOf(
+        EmpleadoTiempoCompleto("Ana López", "E001", 2500.0),
+        EmpleadoPorHoras("Carlos Ruiz", "E002", 160.0, 15.0),
+        Gerente("María García", "G001", 4000.0, 1000.0)
+    )
+    
+    println("=== NÓMINA DE EMPLEADOS ===")
+    // Polimorfismo: cada empleado calcula su salario de manera diferente
+    for (empleado in empleados) {
+        empleado.mostrarInformacion()
+    }
+    
+    // Uso específico de Gerente
+    val gerente = empleados[2] as Gerente
+    gerente.dirigirReunion()
+}
+            </code></pre>
+        </section>
+    </div><br>
+
+    <!-- DIAGRAMAS UML BÁSICOS -->
+    <div class="content-page">
+        <h1>Diagramas UML para POO</h1>
+        <hr>
+        
+        <p>UML (Unified Modeling Language) es un lenguaje estándar para visualizar el diseño de sistemas orientados a objetos.</p>
+        
+        <div class="image-container">
+            <h3>Diagrama de Clases Básico</h3>
+            <div style="background:#f0f8ff; padding:20px; border-radius:10px; text-align:left; font-family:monospace;">
+                <div style="border:2px solid #0891B2; border-radius:5px;">
+                    <div style="background:#0891B2; color:white; padding:10px; font-weight:bold;">Persona</div>
+                    <div style="padding:10px;">
+                        <div>- nombre: String</div>
+                        <div>- edad: Int</div>
+                        <div>+ saludar(): void</div>
+                        <div>+ cumplirAnios(): void</div>
+                    </div>
+                </div>
+                <div style="text-align:center; margin:10px 0;">↓ (herencia)</div>
+                <div style="display:flex; justify-content:space-around;">
+                    <div style="border:2px solid #0E7490; border-radius:5px; width:45%;">
+                        <div style="background:#0E7490; color:white; padding:10px; font-weight:bold;">Estudiante</div>
+                        <div style="padding:10px;">
+                            <div>- matricula: String</div>
+                            <div>+ estudiar(): void</div>
+                        </div>
+                    </div>
+                    <div style="border:2px solid #0E7490; border-radius:5px; width:45%;">
+                        <div style="background:#0E7490; color:white; padding:10px; font-weight:bold;">Profesor</div>
+                        <div style="padding:10px;">
+                            <div>- especialidad: String</div>
+                            <div>+ enseñar(): void</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="image-caption">Ejemplo de diagrama UML: Clase Persona y sus subclases</p>
+        </div>
+        
+        <div class="image-container" style="margin-top:30px;">
+            <h3>Relaciones entre Clases</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/UML_class_relation_arrows_es.svg/800px-UML_class_relation_arrows_es.svg.png" alt="Relaciones UML" style="width:100%; max-width:800px;">
+            <p class="image-caption">Tipos de relaciones en UML: Herencia, Asociación, Agregación, Composición</p>
+        </div>
+    </div><br>
+
+    <!-- BENEFICIOS Y APLICACIONES -->
+    <div class="content-page">
+        <h1>Beneficios y Aplicaciones de la POO</h1>
+        <hr>
+        
+        <div class="examples-grid">
+            <div class="card">
+                <h3>✅ Beneficios</h3>
+                <ul style="text-align:left; padding-left:20px;">
+                    <li><strong>Reutilización de código:</strong> Las clases se pueden usar múltiples veces</li>
+                    <li><strong>Mantenibilidad:</strong> Fácil de modificar y extender</li>
+                    <li><strong>Modularidad:</strong> Cada objeto es independiente</li>
+                    <li><strong>Seguridad:</strong> Encapsulamiento protege los datos</li>
+                    <li><strong>Flexibilidad:</strong> Polimorfismo permite adaptabilidad</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🌍 Aplicaciones Reales</h3>
+                <ul style="text-align:left; padding-left:20px;">
+                    <li><strong>Interfaces Gráficas:</strong> Botones, ventanas, menús como objetos</li>
+                    <li><strong>Videojuegos:</strong> Personajes, objetos, escenarios</li>
+                    <li><strong>Sistemas Bancarios:</strong> Cuentas, clientes, transacciones</li>
+                    <li><strong>Redes Sociales:</strong> Usuarios, publicaciones, mensajes</li>
+                    <li><strong>Aplicaciones Móviles:</strong> Pantallas, componentes UI</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Comparación POO vs Programación Estructurada</h3>
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Programación Estructurada</th>
+                        <th>Programación Orientada a Objetos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Enfoque</td>
+                        <td>Funciones y procedimientos</td>
+                        <td>Objetos y sus interacciones</td>
+                    </tr>
+                    <tr>
+                        <td>Datos</td>
+                        <td>Separados de las funciones</td>
+                        <td>Integrados en objetos (atributos)</td>
+                    </tr>
+                    <tr>
+                        <td>Reutilización</td>
+                        <td>Limitada a funciones</td>
+                        <td>Alta (clases, herencia)</td>
+                    </tr>
+                    <tr>
+                        <td>Mantenimiento</td>
+                        <td>Difícil en sistemas grandes</td>
+                        <td>Más fácil y organizado</td>
+                    </tr>
+                    <tr>
+                        <td>Ejemplo</td>
+                        <td>Lenguaje C</td>
+                        <td>Java, C++, Kotlin, Python</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><br>
+
+    <!-- RECURSOS ADICIONALES -->
+    <div class="content-page">
+        <h1>Consejos para Aprender POO</h1>
+        <hr>
+        
+        <div class="contenedor-degradado">
+            <h2 style="color:white;">💡 Pensar en Objetos, no en Funciones</h2>
+            <p style="color:white; font-size:18px;">
+                La clave para dominar la POO es cambiar tu mentalidad. En lugar de pensar "¿qué pasos debo seguir?", pregúntate:<br>
+                <strong>"¿Qué objetos existen en este problema y cómo interactúan?"</strong>
+            </p>
+        </div>
+        
+        <div class="examples-grid" style="margin-top:30px;">
+            <div class="card">
+                <h3>🔍 Ejercicio Mental</h3>
+                <p>Para practicar, analiza objetos en tu entorno:</p>
+                <ul style="text-align:left;">
+                    <li><strong>Automóvil:</strong> Atributos (color, marca), Métodos (acelerar, frenar)</li>
+                    <li><strong>Libro:</strong> Atributos (título, autor), Métodos (abrir, leer página)</li>
+                    <li><strong>Teléfono:</strong> Atributos (modelo, batería), Métodos (llamar, tomar foto)</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>📝 Mejores Prácticas</h3>
+                <ul style="text-align:left;">
+                    <li>Nombres claros para clases y métodos</li>
+                    <li>Una clase = una responsabilidad</li>
+                    <li>Usar encapsulamiento siempre que sea posible</li>
+                    <li>Preferir composición sobre herencia</li>
+                    <li>Documentar con comentarios claros</li>
+                </ul>
+            </div>
+        </div>
+    </div><br>
+
+    <!-- VIDEO (PLACEHOLDER) -->
+    <div class="content-page">
+        <h1>Video Explicativo</h1>
+        <hr>
+        
+        <p>
+            En el siguiente video se explica la teoría de POO y el desarrollo de los ejercicios prácticos paso a paso.
+        </p>
+        
+        <div class="contenedor-degradado">
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> 
+            <iframe src="https://drive.google.com/file/d/ID_DEL_ARCHIVO/preview" 
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen> 
+            </iframe> 
+        </div>      
+        </div>
+    </div><br>
+
+    <center>
+        <a href="index.html" class="btn-back">← Vol

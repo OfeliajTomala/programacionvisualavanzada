@@ -5,35 +5,44 @@
     <meta charset="UTF-8">
     <title>Sentencias de control</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
 
     <header class="internal-header">
-        <h2>Sentencias de control</h2>
+        <h2>Sentencias de control</h2>       
     </header>
-
-    <div class="content-page">
-
+    <br>
+    <div class="content-page"> 
+        
         <p>Las sentencias de control son estructuras que permiten controlar el flujo de ejecución de un programa.</p>
-
+        
         <p>Esto permite que el programa pueda:</p>
-
+        
         <ul class="list">
             <li>Tomar decisiones</li>
             <li>Repetir instrucciones</li>
             <li>Ejecutar diferentes caminos según una condición</li>
         </ul>
-
+        
         <p>
             Son esenciales para crear aplicaciones dinámicas, interactivas y funcionales,
             especialmente en el desarrollo web y la programación visual.
         </p>
+    </div><br>
+    <!-- SENTENCIAS CONDICIONALES -->
+    <div class="content-page">
+        <h1>Sentencias condicionales</h1>
+        <hr>
 
-        <h2>Sentencias condicionales</h2>
-
+        <h2>Sentencias if - else - else if </h2>
         <p>Permiten ejecutar un bloque de código solo si se cumple una condición determinada.</p>
-
+        
         <div class="examples-grid">
             <!--Condicion if  -->
             <div class="flip-card">
@@ -41,51 +50,377 @@
                     <input type="checkbox">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <h3>Condición IF</h3>
-                            <p>Evalúa una condición lógica y ejecuta el código solo si es verdadera.</p>
-                            <p><strong>Condición:</strong> edad >= 18</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>Código IF</h3>
-                            <div class="code-block">
-                                <code>
-                                    if (edad >= 18) {
-                                        System.out.println("Mayor de edad");
-                                    }
-                                </code>
+                            <h3>Condición if</h3>
+                            <p>Ejecuta un bloque de instrucciones solo cuando una condición es verdadera. Si no se
+                                cumple, el programa continúa su ejecución normal.</p>
+                            <pre class="code-block"><code class="language-kotlin">
+if (condicion) {
+// instrucciones
+}
+                            </code></pre>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ejemplo if</h3>
+                                <pre class="code-block"><code class="language-kotlin">
+val edad = 18
+                                                    
+if (edad >= 18) {
+println("Es mayor de edad")
+}
+                                    </code></pre>
                             </div>
                         </div>
-                    </div>
                 </label>
             </div>
 
-            <!--Condicion if  -->
+            <!--Condicion if - else -->
             <div class="flip-card">
                 <label>
                     <input type="checkbox">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <h3>Condición IF</h3>
-                            <p>Evalúa una condición lógica y ejecuta el código solo si es verdadera.</p>
-                            <p><strong>Condición:</strong> edad >= 18</p>
+                            <h3>Condición else</h3>
+                            <p>Permite seleccionar entre dos alternativas. Se ejecuta un bloque si la condición es
+                                verdadera y otro si es falsa.</p>
+                            <pre class="code-block"><code class="language-kotlin">
+if (condicion) {
+    // instrucciones si es verdadera
+} else {
+    // instrucciones si es falsa
+}
+                        </code></pre>
+
                         </div>
                         <div class="flip-card-back">
-                            <h3>Código IF</h3>
-                            <div class="code-block">
-                                <code>
-                                    if (edad >= 18) {
-                                        System.out.println("Mayor de edad");
-                                    }
-                                </code>
-                            </div>
+                            <h3>Ejemplo if-else</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+
+val nota = 7 
+                                    
+if (nota == 7) { 
+println("Aprobado") 
+} else { 
+println("Reprobado") 
+}
+                                </code></pre>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <!--Condicion else if -->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Condición else if</h3>
+                            <p>Se utiliza para evaluar múltiples condiciones de forma secuencial. El primer bloque cuya
+                                condición sea verdadera será el que se ejecute.</p>
+                            <pre class="code-block"><code class="language-kotlin">
+if (condicion1) {
+    // código
+} else if (condicion2) {
+    // código
+} else {
+    // código final
+}
+                        </code></pre>
+
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo else if</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+val calificacion = 9
+
+if (calificacion >= 9) {
+    println("Excelente")
+} else if (calificacion >= 7) {
+    println("Bueno")
+} else {
+    println("Insuficiente")
+}                             
+</code></pre>
                         </div>
                     </div>
                 </label>
             </div>
         </div>
 
+        <h2>Sentencia switch</h2>
+        <p>Se usa cuando hay varias opciones posibles según un valor.</p>
+        
+        <div class="examples-grid">
+            <!--Condicion switch  -->
+            <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Condición switch</h3>
+                            <p>Selecciona un bloque de código según el valor de una variable, siendo más clara y
+                                ordenada que múltiples if - else cuando existen varias opciones.</p>
+                            <pre class="code-block"><code class="language-java">
+switch (variable) { 
+case valor: 
+// instrucciones
+break;
+default:
+// caso por defecto
+}
+</code></pre>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo switch</h3>
+                            <pre class="code-block"><code class="language-java">
+int dia = 3;
+
+switch (dia) {
+    case 1:
+        System.out.println("Lunes");
+        break;
+    case 2:
+        System.out.println("Martes");
+        break;
+    case 3:
+        System.out.println("Miércoles");
+        break;
+    default:
+        System.out.println("Día inválido");
+}
+</code></pre>
+
+                        </div>
+                    </div>
+                </label>
+            </div>
+        
+           <div class="flip-card">
+                <label>
+                    <input type="checkbox">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Condición when</h3>
+                            <p>La sentencia <strong>switch</strong> se utiliza en varios lenguajes como Java o C++.
+    En Kotlin, esta estructura se reemplaza por la sentencia <strong>when</strong>.</p>
+                            <pre class="code-block"><code class="language-kotlin">
+when (variable) {
+    valor1 -> // instrucciones
+    valor2 -> // instrucciones
+    else -> // caso por defecto
+}
+</code></pre>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Ejemplo when</h3>
+                            <pre class="code-block"><code class="language-kotlin">
+val dia = 3
+
+when (dia) {
+    1 -> println("Lunes")
+    2 -> println("Martes")
+    3 -> println("Miércoles")
+    else -> println("Día inválido")
+}
+</code></pre>
+
+                        </div>
+                    </div>
+                </label>
+            </div>    
+        </div>  
+
+    </div><br>
+    <!-- SENTENCIAS DE REPETICION -->    
+    <div class="content-page">
+
+    <h1>Sentencias de Repetición (Bucles)</h1><hr>
+
+    <p>
+        Las sentencias de repetición, también conocidas como bucles, permiten ejecutar
+        un bloque de código varias veces mientras se cumpla una condición determinada.
+    </p>
+
+    <div class="examples-grid">
+
+        <!-- BUCLE FOR -->
+        <div class="flip-card">
+            <label>
+                <input type="checkbox">
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front">
+                        <h3>Bucle for</h3>
+                        <p>
+                            Se utiliza cuando se conoce previamente la cantidad de veces
+                            que se debe repetir un bloque de código.
+                        </p>
+
+                        <pre class="code-block"><code class="language-kotlin">
+for (i in 1..5) {
+    println(i)
+}
+                        </code></pre>
+                    </div>
+
+                    <div class="flip-card-back">
+                        <h3>Ejemplo for</h3>
+
+                        <pre class="code-block"><code class="language-kotlin">
+for (i in 1..10) {
+    println("Número: $i")
+}
+                        </code></pre>
+                    </div>
+
+                </div>
+            </label>
+        </div>
+
+        <!-- BUCLE WHILE -->
+        <div class="flip-card">
+            <label>
+                <input type="checkbox">
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front">
+                        <h3>Bucle while</h3>
+                        <p>
+                            Ejecuta un bloque de código mientras la condición sea verdadera.
+                            La condición se evalúa antes de cada iteración.
+                        </p>
+
+                        <pre class="code-block"><code class="language-kotlin">
+while (condicion) {
+    // instrucciones
+}
+                        </code></pre>
+                    </div>
+
+                    <div class="flip-card-back">
+                        <h3>Ejemplo while</h3>
+
+                        <pre class="code-block"><code class="language-kotlin">
+var contador = 1
+
+while (contador <= 5) {
+    println(contador)
+    contador++
+}
+                        </code></pre>
+                    </div>
+
+                </div>
+            </label>
+        </div>
+
+        <!-- BUCLE DO WHILE -->
+        <div class="flip-card">
+            <label>
+                <input type="checkbox">
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front">
+                        <h3>Bucle do - while</h3>
+                        <p>
+                            Similar al bucle while, pero garantiza que el bloque de código
+                            se ejecute al menos una vez.
+                        </p>
+
+                        <pre class="code-block"><code class="language-kotlin">
+do {
+    // instrucciones
+} while (condicion)
+                        </code></pre>
+                    </div>
+
+                    <div class="flip-card-back">
+                        <h3>Ejemplo do - while</h3>
+
+                        <pre class="code-block"><code class="language-kotlin">
+var numero = 1
+
+do {
+    println(numero)
+    numero++
+} while (numero <= 3)
+                        </code></pre>
+                    </div>
+
+                </div>
+            </label>
+        </div>
+
     </div>
 
+    </div><br>
+    <!-- EJERCICIOS PRACTICOS -->
+    <div class="content-page">
+    <h1>Ejercicios practicos</h1><hr>
+    <!--Ejercco 1-->
+    <section class="exercise">
+    <h3>Ejercicio 1: Precio de entrada según la edad</h3>
+    <p>
+        Escribir un programa para una empresa que tiene salas de juegos y que calcule el precio de la entrada según la edad del cliente:
+        Menores de 4 años → Entrada gratuita;
+        Entre 4 y 18 años → $5 ;
+        Mayores de 18 años → $10 
+    </p>
+
+    <pre class="code-block"><code class="language-kotlin">
+print("Ingrese la edad del cliente: ")
+val edad = readLine()!!.toInt()
+
+if (edad < 4) {
+    println("La entrada es gratuita")
+} else if (edad <= 18) {
+    println("El precio de la entrada es $5")
+} else {
+    println("El precio de la entrada es $10")
+}
+    </code></pre>
+    </section>
+    <!--Ejercco 2-->
+    <section class="exercise">
+    <h3>Ejercicio 2: Números impares hasta un número dado</h3>
+    <p>
+        Escribir un programa que pida un número entero positivo y muestre todos los números impares desde 1 hasta ese número, separados por comas.
+    </p>
+
+    <pre class="code-block"><code class="language-kotlin">
+print("Ingrese un número entero positivo: ")
+val numero = readLine()!!.toInt()
+
+for (i in 1..numero step 2) {
+    if (i < numero) {
+        print("$i, ")
+    } else {
+        print(i)
+    }
+}
+    </code></pre>
+    </section>
+
+    </div><br>
+
+    <div class="content-page">
+    <h1>Video explicativo</h1><hr>
+
+        <p>
+            En el siguiente video se explica paso a paso el funcionamiento de las sentencias
+            de control y se desarrollan ejemplos prácticos.
+        </p>
+    <div class="contenedor-degradado">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> 
+            <iframe src="https://drive.google.com/file/d/ID_DEL_ARCHIVO/preview" 
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen> 
+            </iframe> 
+        </div>      
+
+    </div>
+    </div>
     <a href="index.html" class="btn-back">← Volver al inicio</a>
 
 </body>
