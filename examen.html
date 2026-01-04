@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Examen final</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+</head>
+
+<body>
+    <header class="internal-header">
+        <h2>Examen Final: Proyecto de Desarrollo de Aplicación</h2>
+    </header>
+    <br>
+
+    <div class="content-page">
+        <h1>Fase 1: Contacto inicial con el cliente </h1>
+        <hr>
+        <p>
+            En esta fase se realizo el primer acercamiento con la persona interesada en el sistema,
+            con el objetivo de comprender el contexto general del negocio de venta por catálogo
+            y la problemática existente en el manejo manual de pedidos, pagos y deudas.
+        </p>
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3>¿Quién es el cliente, que necesita y porque?</h3>
+            </div>
+            <div class="contenedor-box">
+                <p> El cliente es una vendedora de productos por catálogo que necesita una aplicación móvil para
+                    organizar y controlar sus pedidos, clientes, pagos, campañas y ganancias.
+                    La necesita porque actualmente maneja esta información de forma manual, lo que le genera confusión,
+                    errores en el cálculo de deudas y pérdida de tiempo al momento de revisar sus ventas.</p>
+            </div>
+        </div>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3>¿Que preguntas se realizaron para entender mejor el tema?</h3>
+            </div>
+            <div class="contenedor-box">
+                <p>Se realizaron las siguientes preguntase para comprender mejor las necesidades del cliente:<br>
+                <p><b>1.</b> ¿Cómo registra actualmente los pedidos y pagos?<br>
+                    <b>2.</b> ¿Cuántas revistas o campañas maneja al mismo tiempo?<br>
+                    <b>3.</b> ¿Vende productos que no son de catálogo?<br>
+                    <b>4.</b> ¿Cómo controla la deuda de sus clientes?<br>
+                    <b>5.</b> ¿Le gustaría que la app calcule automáticamente sus ganancias y muestre un resumen
+                    general?
+                </p>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="content-page">
+        <h1>Fase 2: Levantamiento de requisitos</h1>
+        <p>
+            A partir de la información obtenida, se procedió a recopilar los requisitos del sistema,
+            definiendo claramente qué funcionalidades debía incluir la aplicación para cubrir las
+            necesidades de la cliente.
+        </p>
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3>Identificar usuarios del sistema</h3>
+            </div>
+            <div class="contenedor-box">
+                <p>Se identificó un único tipo de usuario: <br>
+                    <strong>Vendedora:</strong> Quien será la encargada de registrar
+                    pedidos, pagos, productos, consultar información y visualizar reportes<br>
+            </div>
+        </div><br>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3>Definir funciones principales y secundarias</h3>
+            </div>
+            <div class="contenedor-box">
+                <p> <strong>Funciones principales:</strong><br>
+                    🟢 Registrar pedidos<br>
+                    🟢 Registrar pagos <br>
+                    🟢 Registrar otros productos vendidos <br>
+                    🟢 Gestionar clientes<br>
+                    🟢 Gestionar revistas y campañas<br>
+                    🟢 Visualizar resumen de ganancias</p>
+
+                <p><strong>Funciones secundarias:</strong><br>
+                    🟢 Consultar actividad reciente <br>
+                    🟢 Visualizar alertas del sistema <br>
+                    🟢 Consultar pedidos por revista y campaña <br>
+                    🟢 Consultar deuda de clientes</p>
+            </div>
+        </div><br>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3>Especificar pantallas necesarias</h3>
+            </div>
+            <div class="contenedor-box">
+                <p>Se definieron las siguientes pantallas:<br>
+                    🟢 Dashboard (Inicio) <br>
+                    🟢 Registro de pedidos <br>
+                    🟢 Registro de pagos <br>
+                    🟢 Registro de otros productos <br>
+                    🟢 Revistas y campañas <br>
+                    🟢 Clientes y detalle de deuda <br>
+                    🟢 Otros productos vendidos<br>
+                    🟢 Resumen de ganancias</p>
+            </div>
+        </div><br>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3>Determinar qué datos se guardarán</h3>
+            </div>
+            <div class="contenedor-box">
+                <p> El sistema almacenará información relacionada con:<br>
+                    🟢 Clientes <br>
+                    🟢 Productos <br>
+                    🟢 Revistas <br>
+                    🟢 Campañas <br>
+                    🟢 Pedidos <br>
+                    🟢 Pagos <br>
+                    🟢 Otros productos vendidos <br>
+                    🟢 Ganancias y deudas <br>
+
+                    Estos datos se estructuran en el diagrama entidad–relación del sistema.
+                <p>
+            </div>
+        </div><br>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3> Establecer restricciones</h3>
+            </div>
+            <div class="contenedor-box">
+                <p>Se definieron las siguientes restricciones:<br>
+                    🟢 Solo se pueden eliminar clientes cuando su deuda sea cero.<br>
+                    🟢 Las fechas de envío y llegada de campañas son opcionales.<br>
+                    🟢 Los pagos no pueden superar la deuda del cliente. <br>
+                    🟢 La ganancia se calcula automáticamente por el sistema.</p>
+            </div>
+        </div><br>
+
+    </div><br>
+
+    <div class="content-page">
+        <h1>Fase 3: Análisis del problema</h1>
+        <p>
+            El análisis del negocio de venta por catálogo permitió identificar problemas como la falta de organización
+            de la información, inconsistencias en el cálculo de deudas y ganancias, y dificultad para acceder a
+            registros históricos.
+            Estas situaciones se deben al manejo manual de los registros, lo que genera desorganización y
+            posibles inconsistencias. El sistema propuesto soluciona estos problemas mediante la automatización de los
+            procesos y la centralización de la información, facilitando una gestión más eficiente y confiable del
+            negocio.
+        </p>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3> Definir procesos y reglas de negocio</h3>
+            </div>
+            <div class="contenedor-box">
+                <p>Se definieron reglas claras, entre ellas:<br>
+                    🟢 Cada pedido genera deuda.<br>
+                    🟢 Cada pago reduce la deuda. <br>
+                    🟢 Los productos fuera de catálogo también generan deuda.<br>
+                    🟢 La ganancia se obtiene de la diferencia entre precio de venta y precio de compra.
+                </p>
+            </div>
+        </div>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3> Creación de diagramas de flujo</h3>
+
+            </div>
+            <div class="contenedor-box">
+                <p> Se elaboraron diagramas de flujo para representar:<br>
+                    🟢 Registro de pedidos<br>
+                    🟢 Registro de pagos <br>
+                    🟢 Cálculo de ganancias <br>
+                    🟢 Actualización de deudas</p>
+            </div>
+        </div><br>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h3> Desarrollo de Casos de uso</h3>
+            </div>
+            <div class="contenedor-box">
+                <h2> 🟢 Caso de uso 1: Registrar pedido</h2>
+                <p><strong>Actor:</strong> Vendedora <br>
+                    <strong>Descripción:</strong>Permite registrar un pedido realizado desde una revista y campaña
+                    específica.<br>
+                    <strong>Flujo principal:</strong><br>
+                    1. La vendedora selecciona “Registrar pedido”.<br>
+                    2. Ingresa revista, producto, campaña, precio y cliente. <br>
+                    3. El sistema valida los datos. <br>
+                    4. El sistema registra el pedido.<br>
+                    5. El sistema suma el valor a la deuda del cliente.<br>
+                    <strong>Resultado:</strong>Pedido registrado y deuda del cliente actualizada.
+                </p>
+            </div><br>
+            <div class="contenedor-box">
+                <h2>🟢 Caso de uso 2: Registrar pago</h2>
+                <p><strong>Actor:</strong> Vendedora <br>
+                    <strong>Descripción:</strong> Permite registrar un pago realizado por un cliente.<br>
+                    <strong>Flujo principal:</strong><br>
+                    1. La vendedora selecciona “Registrar pago”.<br>
+                    2. Selecciona un cliente.<br>
+                    3. Ingresa fecha y monto del pago.<br>
+                    4. El sistema valida que el pago no supere la deuda.<br>
+                    5. El sistema registra el pago.<br>
+                    6. El sistema reduce la deuda del cliente.<br>
+                    <strong>Resultado:</strong> Pago registrado y deuda actualizada.
+                </p>
+            </div><br>
+            <div class="contenedor-box">
+                <h2>🟢 Caso de uso 3: Registrar otros productos vendidos</h2>
+                <p><strong>Actor:</strong> Vendedora <br>
+                    <strong>Descripción:</strong> Permite registrar productos vendidos que no pertenecen a revistas.<br>
+                    <strong>Flujo principal:</strong><br>
+                    1. La vendedora selecciona “Registrar otros productos vendidos”.<br>
+                    2. Ingresa nombre del producto, precio y cliente.<br>
+                    3. El sistema registra la venta.<br>
+                    4. El sistema suma el valor a la deuda del cliente.<br>
+                    <strong>Resultado:</strong> Producto registrado y deuda
+                    actualizada.
+                </p>
+            </div><br>
+            <div class="contenedor-box">
+                <h2>🟢 Caso de uso 4: Gestionar clientes</h2>
+                <p><strong>Actor:</strong> Vendedora <br>
+                    <strong>Descripción:</strong> Permite visualizar, administrar y eliminar clientes sin deuda.<br>
+                    <strong>Flujo principal:</strong><br>
+                    1. La vendedora accede a “Clientes”.<br>
+                    2. El sistema muestra la lista de clientes.<br>
+                    3. Selecciona un cliente para ver detalles.<br>
+                    4. Si la deuda es cero, el sistema permite eliminarlo.<br>
+                    <strong>Resultado:</strong>Clientes gestionados correctamente.
+                </p>
+            </div><br>
+            <div class="contenedor-box">
+                <h2>🟢 Caso de uso 5: Consultar deuda de cliente</h2>
+                <p><strong>Actor:</strong> Vendedora <br>
+                    <strong>Descripción:</strong> Permite visualizar la deuda total y pagos de un cliente.<br>
+                    <strong>Flujo principal:</strong><br>
+                    1. La vendedora selecciona un cliente.<br>
+                    2.El sistema muestra productos, campañas, pagos y deuda total.<br>
+                    <strong>Resultado:</strong> Estado financiero del cliente visualizado.
+                </p>
+            </div><br>
+            <div class="contenedor-box">
+                <h2>🟢 Caso de uso 6: Gestionar revistas</h2>
+                <p><strong>Actor:</strong> Vendedora <br>
+                    <strong>Descripción:</strong> Permite registrar y consultar revistas y sus campañas.<br>
+                    <strong>Flujo principal:</strong><br>
+                    1. La vendedora accede a “Revistas”.<br>
+                    2. Registra o selecciona una revista.<br>
+                    3. El sistema muestra las campañas asociadas.<br>
+                    <strong>Resultado:</strong>Revistas y campañas organizadas.
+                </p>
+            </div><br>
+            <div class="contenedor-box">
+                <h2>🟢 Caso de uso 7: Consultar pedidos por revista y campaña</h2>
+                <p><strong>Actor:</strong> Vendedora <br>
+                    <strong>Descripción:</strong> Permite visualizar los pedidos organizados por revista y campaña.<br>
+                    <strong>Flujo principal:</strong><br>
+                    1. La vendedora selecciona una revista.<br>
+                    2. Selecciona una campaña.<br>
+                    3. El sistema muestra los pedidos, totales y fechas opcionales.<br>
+                    <strong>Resultado:</strong> Pedidos visualizados por revista y campaña.
+                </p>
+            </div><br>
+            <div class="contenedor-box">
+                <h2>🟢 Caso de uso 8: Consultar otros productos vendidos</h2>
+                <p><strong>Actor:</strong> Vendedora <br>
+                    <strong>Descripción:</strong> Permite visualizar productos que no pertenecen a catálogos.<br>
+                    <strong>Flujo principal:</strong><br>
+                    1. La vendedora accede a “Otros productos vendidos”.<br>
+                    2. El sistema muestra producto, cliente, precio, costo y ganancia.<br>
+                    <strong>Resultado:</strong> Listado de productos adicionales visualizado.
+                </p>
+            </div><br>
+            <div class="contenedor-box">
+                <h2>🟢 Caso de uso 9: Visualizar resumen de ganancias</h2>
+                <p><strong>Actor:</strong> Vendedora <br>
+                    <strong>Descripción:</strong> Permite visualizar las ganancias del negocio.<br>
+                    <strong>Flujo principal:</strong><br>
+                    1. La vendedora accede al “Resumen de ganancias”.<br>
+                    2.El sistema obtiene precios de compra y venta.<br>
+                    3. Calcula ganancia por producto.<br>
+                    4. Calcula ganancia por campaña.<br>
+                    5. Suma las ganancias totales.<br>
+                    6. Muestra el resumen.<br>
+                    <strong>Resultado:</strong>Resumen de ganancias mostrado correctamente.
+                </p>
+            </div><br>
+        </div>
+    </div><br>
+
+    <div class="content-page">
+        <h1>Diagramas</h1>
+        <hr>
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h2>Diagrama de flujo</h2>
+                <div class="horizontal-wrapper">
+                    <div class="img-wrapper">
+                        <img src="imagenes/Diagrama1.png" alt="Diagrama" , style="max-height: 250px;">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="imagenes/Diagrama2.png" alt="Diagrama" , style="max-height: 250px;">
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="imagenes/Diagrama3.png" alt="Diagrama" , style="max-height: 250px;">
+                </div>
+            </div>
+        </div><br>
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h2>Diagrama de casos de uso</h2>
+                <div class="img-wrapper">
+                    <img src="imagenes/Casos de uso.png" alt="Diagrama de casos de uso" , style="max-height: 250px;">
+                </div>
+            </div>
+        </div><br>
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h2>Diagrama de entidad-relacion</h2>
+                <div class="img-wrapper">
+                    <img src="imagenes/DiagramaE-R.png" alt="Diagrama entidad-relacion " , style="max-height: 250px;">
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="content-page">
+        <h1>Diseño de la solución</h1>
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h2>Crear wireframes</h2>
+                <p>
+                    Se elaboraron wireframes que representan la estructura de cada pantalla, permitiendo definir la
+                    ubicación de botones, formularios, tablas e información antes del diseño visual final.
+                </p>
+                <div class="contenedor-degradado">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                        src="https://embed.figma.com/design/os7fxah3USzmvBb2pkgooP/Wireframes--Sistema-de-ventas?embed-host=share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div><br>
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h2>Diseñar prototipos en Figma</h2>
+            </div>
+            <div class="contenedor-box">
+
+                <h3>Elementos de diseño</h3>
+
+
+                <strong>Colores:</strong>
+                <div class="tabla">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Uso</th>
+                                <th>Color</th>
+                                <th>Hex</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fondo principal</td>
+                                <td style="background-color: #F8F9FC;">Blanco suave</td>
+                                <td><code>#F8F9FC</code></td>
+                            </tr>
+                            <tr>
+                                <td>Fondo de tarjetas</td>
+                                <td style="background-color: #FFFFFF;">Blanco</td>
+                                <td><code>#FFFFFF</code></td>
+                            </tr>
+                            <tr>
+                                <td>Color primario (botones)</td>
+                                <td style="background-color: #E85A70; color: white;">Rosa coral</td>
+                                <td><code>#E85A70</code></td>
+                            </tr>
+                            <tr>
+                                <td>Secundario</td>
+                                <td style="background-color: #6C63FF; color: white;">Morado suave</td>
+                                <td><code>#6C63FF</code></td>
+                            </tr>
+                            <tr>
+                                <td>Texto principal</td>
+                                <td style="background-color: #2E2E2E; color: white;">Gris oscuro</td>
+                                <td><code>#2E2E2E</code></td>
+                            </tr>
+                            <tr>
+                                <td>Texto secundario</td>
+                                <td style="background-color: #6B7280; color: white;">Gris medio</td>
+                                <td><code>#6B7280</code></td>
+                            </tr>
+                            <tr>
+                                <td>Éxito / ganancias</td>
+                                <td style="background-color: #2ECC71; color: white;">Verde</td>
+                                <td><code>#2ECC71</code></td>
+                            </tr>
+                            <tr>
+                                <td>Advertencia / deuda</td>
+                                <td style="background-color: #E74C3C; color: white;">Rojo suave</td>
+                                <td><code>#E74C3C</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+
+
+
+                <strong>Tipografía:</strong> <br>
+                <p>
+                    🟢<strong>Título principal / encabezados:</strong> Poppins Bold o Inter SemiBold<br>
+                    🟢<strong>Textos: </strong>Inter Regular <br>
+                    🟢<strong>Botones y llamadas a la acción: </strong>Inter Medium o Poppins Medium</p>
+
+                <strong>Botones:</strong>
+                <p>Los botones tienen bordes redondeados y colores definidos según su
+                    función.
+                </p>
+
+                <strong>Iconos:</strong>
+                <p>Se incorporaron iconos simples en el menú lateral y barras de
+                    navegación para mejorar la usabilidad y hacer la interfaz más intuitiva, ayudando a identificar
+                    rápidamente las secciones.</p>
+
+
+                <strong>Espaciado y Organización:</strong>
+                <p>El diseño mantiene un espaciado uniforme entre
+                    secciones, tarjetas y botones, logrando una apariencia ordenada, limpia y fácil de navegar,
+                    especialmente en pantallas pequeñas.</p>
+
+
+
+
+            </div><br>
+
+            <div class="contenedor-box">
+                <h3>Pantallas de la Aplicación</h3>
+
+                <p><strong>1. Pantalla de Inicio de Sesión</strong><br>
+                    Campos: Correo, Contraseña.<br>
+                    Opciones: Iniciar sesión, ¿Olvidaste tu contraseña?, Registrarse, Iniciar sesión con Google.</p>
+
+                <p><strong>2. Pantalla de Registro</strong><br>
+                    Campos: Correo, Contraseña.<br>
+                    Opciones: Registrarse, ¿Olvidaste tu contraseña?, Iniciar sesión con Google, Enlace para iniciar
+                    sesión si ya tiene cuenta.</p>
+
+                <p><strong>3. Dashboard (Resumen General</strong>)<br>
+                    Muestra métricas clave como: Ganancia total, Número de clientes, Pagos recibidos.<br>
+                    Accesos directos para: Registrar pago, Registrar pedido, Registrar venta de otros productos.<br>
+                    Actividad reciente: pedidos, ventas y pagos.<br>
+                    Alertas y estado: clientes con pagos atrasados, campañas sin fecha, entre otros.</p>
+                <p><strong>4. Pantalla de Registro de Pedidos</strong><br>
+                    Campos: Producto, Precio, Cliente, Revista, Campaña, Año.<br>
+                    Botones: Guardar, Cerrar.
+                </p>
+
+                <p><strong>5. Pantalla de Registro de Pagos</strong><br>
+                    Campos: Monto, Cliente, Fecha.<br>
+                    Información adicional: Deuda actual.<br>
+                    Botones: Guardar, Cerrar.
+                </p>
+
+                <p><strong>6. Pantalla de Registro de Venta de Otros Productos</strong><br>
+                    Campos: Producto, Precio de venta, Precio de compra, Cliente.<br>
+                    Botones: Guardar, Cerrar.
+                </p>
+
+                <p><strong>7. Pantalla de Clientes</strong><br>
+                    Lista de clientes con información de deuda.<br>
+                    Opciones para buscar cliente.<br>
+
+                </p>
+
+                <p><strong>8. Pantalla de Detalle de Cliente</strong><br>
+                    Pantalla que se abre al hacer clic en un cliente.<br>
+                    Muestra historial detallado de pedidos, pagos y ventas asociadas al cliente.<br>
+                    Detalles de deuda y pagos realizados.<br>
+                    Detalle de pagos realizados y deuda restante.<br>
+                    Opción para eliminar cliente solo si la deuda es 0.</p>
+                </p>
+
+                <p><strong>9. Pantalla de Revistas</strong><br>
+                    Lista de revistas disponibles.<br>
+                    Navegación a campañas por revista.
+                </p>
+
+                <p><strong>10. Pantalla de Campañas por Revista</strong><br>
+                    Información de campaña: año, precio, total de productos, fechas de envío y llegada, pagos
+                    realizados y ganancia.<br>
+                    Opciones para registrar fecha de envío y llegada, registrar pago<br>
+                    Filtros para campañas.
+                </p>
+
+                <p><strong>11. Pantalla de Otros Productos Vendidos</strong><br>
+                    Listado con precios de compra y venta, total de productos y ganancias.<br>
+                    Resumen de total de compras, ventas y ganancia.
+                </p>
+
+                <p><strong>12. Pantalla de Resumen General</strong><br>
+                    Resumen completo de ventas, ganancias, pagos recibidos y por cobrar.<br>
+                    Desglose por revista, campañas y otros productos.<br>
+                    Estadísticas adicionales y totales actualizados.
+                </p>
+            </div><br>
+            <div class="contenedor-box">
+                <h2>Interacciones</h2>
+                <p><strong>Navegación entre pantallas</strong><br>
+                    Permite moverse entre las distintas pantallas de la aplicación como inicio de sesión, registro,
+                    dashboard, clientes, pedidos, otras ventas y campañas.
+                </p>
+
+                <p><strong>Formulario interactivo</strong><br>
+                    Ingreso de datos mediante formularios para registrar pedidos, pagos, ventas de productos, así
+                    como para el registro e inicio de sesión de usuarios.
+                </p>
+
+                <p><strong>Selección en listas desplegables</strong><br>
+                    Uso de listas desplegables para seleccionar revista, campaña, año y cliente de forma sencilla y
+                    controlada.
+                </p>
+
+                <p><strong>Filtros y búsqueda</strong><br>
+                    Herramientas para buscar clientes por nombre y filtrar campañas según distintos criterios.
+                </p>
+
+                <p><strong>Botones con feedback</strong><br>
+                    Botones de acción como guardar, cerrar, registrar y eliminar, con retroalimentación visual para
+                    el usuario.
+                </p>
+
+                <p><strong>Alertas o notificaciones</strong><br>
+                    Mensajes informativos sobre el estado de los clientes, alertas de pagos pendientes y campañas
+                    sin fecha registrada.
+                </p>
+            </div>
+        </div>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+                <h2>Arquitectura del Sistema </h2>
+            </div>
+            <div class="contenedor-box">
+                <h2>1. Capa de Presentación (App Android)</h2>
+                <p><strong>Tecnología:</strong> Android Studio (Java/Kotlin).</br>
+                    <strong>Funcionalidad:</strong> Interfaz de usuario con pantallas de login, registro,
+                    dashboard, gestión de clientes, pedidos, pagos, campañas y productos.<br>
+                    Validación de datos en el cliente.<br>
+                    Navegación entre pantallas.<br>
+                    Envío y recepción de datos a Firebase.<br>
+                    Notificaciones push mediante Firebase Cloud Messaging (opcional).<br>
+                    <strong>Comunicación:</strong> Conexión directa con Firebase para autenticación, base de
+                    datos y almacenamiento.
+                </p>
+
+                <h2>2. Capa de Backend / Servicios (Firebase)</h2>
+                <p>Firebase funciona como un backend completo serverless, integrando varios servicios.</p>
+
+                <p><strong>Firebase Authentication:</strong> Autenticación de usuarios con correo y contraseña y
+                    Google Sign-In, con manejo seguro de sesión y tokens.</p>
+
+                <p><strong>Cloud Firestore:</strong> Base de datos NoSQL en tiempo real para almacenar usuarios,
+                    clientes, pedidos, pagos, campañas y productos, con actualización inmediata en la
+                    aplicación.</p>
+
+                <p><strong>Firebase Storage:</strong> Almacenamiento de archivos multimedia como imágenes de
+                    productos, si es necesario.</p>
+
+                <p><strong>Firebase Cloud Functions:</strong> Funciones en la nube opcionales para lógica de
+                    negocio avanzada, validaciones, notificaciones o integraciones.</p>
+
+                <p><strong>Firebase Cloud Messaging:</strong> Servicio para el envío de notificaciones push a la
+                    aplicación.</p>
+
+                <h3>3. Arquitectura General</h3>
+                <p>El usuario interactúa con la aplicación Android desarrollada en Android Studio, la cual se
+                    encarga de la interfaz, navegación y validación de datos.</p>
+                <p>La aplicación se comunica directamente con Firebase, que provee autenticación, base de datos,
+                    almacenamiento, funciones en la nube y mensajería.</p>
+
+                <h3>4. Flujo Básico de Datos</h3>
+                <p>El usuario abre la aplicación e inicia sesión mediante Firebase Authentication.</p>
+                <p>La app consulta Cloud Firestore para cargar la información de clientes, pedidos y demás
+                    datos.</p>
+                <p>Al registrar un pedido o un pago, la aplicación guarda la información en Firestore.</p>
+                <p>Los cambios realizados en Firestore se reflejan en tiempo real dentro de la app.</p>
+                <p>De forma opcional, Cloud Functions valida información o envía notificaciones cuando se
+                    registran nuevos datos.</p>
+
+                <h3>Ventajas de esta Arquitectura</h3>
+                <p><strong>Escalabilidad:</strong> Firebase escala automáticamente sin necesidad de administrar
+                    servidores.</p>
+                <p><strong>Desarrollo rápido:</strong> No es necesario crear un backend propio, Firebase provee
+                    la infraestructura.</p>
+                <p><strong>Sincronización en tiempo real:</strong> Firestore permite actualización inmediata de
+                    los datos.</p>
+                <p><strong>Seguridad:</strong> Firebase Authentication y las reglas de seguridad protegen la
+                    información.</p>
+                <p><strong>Integración sencilla:</strong> Android Studio cuenta con SDKs oficiales que facilitan
+                    la integración con Firebase.</p>
+
+
+
+            </div>
+        </div>
+    </div><br>
+
+    <div class="content-page">
+        <h1>🔗 Enlace al Proyecto de Figma</h1>
+        <hr>
+
+        <h2>Proyecto</h2>
+        <div class="contenedor-degradado">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                src="https://embed.figma.com/design/GHkThzNtJ7wTV4QeIeRps3/Sistema-de-Ventas-por-Cat%C3%A1logo?node-id=0-1&embed-host=share"
+                allowfullscreen></iframe>
+        </div>
+
+        <h2>Prototipado</h2>
+        <div class="contenedor-degradado">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                src="https://embed.figma.com/proto/GHkThzNtJ7wTV4QeIeRps3/Sistema-de-Ventas-por-Cat%C3%A1logo?node-id=4-1380&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A1380&show-proto-sidebar=1&embed-host=share"
+                allowfullscreen></iframe>
+        </div> <br>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+
+                <h2>Enlace a proyecto en figma</h2>
+                <div class="contenedor-box">
+                    <p>https://www.figma.com/design/GHkThzNtJ7wTV4QeIeRps3/Sistema-de-Ventas-por-Cat%C3%A1logo?node-id=0-1&t=UM1fXt6hm3tnZ67e-1
+                    </p>
+                </div>
+
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <a href="https://www.figma.com/design/GHkThzNtJ7wTV4QeIeRps3/Sistema-de-Ventas-por-Cat%C3%A1logo?node-id=0-1&t=UM1fXt6hm3tnZ67e-1"
+                        class="btn-back">
+                        Ver proyecto en Figma
+                    </a>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="contenedor-item">
+            <div class="contenedor-question">
+
+                <h2>Enlace a prototipado en figma</h2>
+                <div class="contenedor-box">
+                    <p>https://www.figma.com/proto/GHkThzNtJ7wTV4QeIeRps3/Sistema-de-Ventas-por-Cat%C3%A1logo?node-id=4-1380&p=f&t=oQKm2E6ikN1GF3d7-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A1380&show-proto-sidebar=1
+                    <p>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <a href="https://www.figma.com/proto/GHkThzNtJ7wTV4QeIeRps3/Sistema-de-Ventas-por-Cat%C3%A1logo?node-id=4-1380&p=f&t=oQKm2E6ikN1GF3d7-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A1380&show-proto-sidebar=1"
+                        class="btn-back">Ver proyecto en figma</a>
+                </div>
+            </div></div><br>
+
+    </div><br>
+    <div class="content-page">
+        <h1>Evidencias</h1>
+       <p> Evidencias de aprobación del cliente (capturas, correos, mensajes)</p> 
+ 
+       <div class="img-wrapper">
+                    <img src="imagenes/Evidencia.png" alt="Evidencia" , style="max-height: 250px;">
+    </div>
+    <div class="img-wrapper">
+                    <img src="imagenes/Evidencia3.png" alt="Evidencia" , style="max-height: 250px;">
+    </div>
+    <div class="img-wrapper">
+                    <img src="imagenes/Evidencia4.png" alt="Evidencia" , style="max-height: 250px;">
+    </div>
+    <div class="img-wrapper">
+                    <img src="imagenes/Evidencia2.png" alt="Evidencia" , style="max-height: 250px;">
+    </div>
+    </div>
+<p>El cliente aprobo el proyecto durante una reunión de zoom</p>
+
+
+
+<a href="index.html" class="btn-back">← Volver al inicio</a>
+
+
+
+
+</body>
+
+</html>
